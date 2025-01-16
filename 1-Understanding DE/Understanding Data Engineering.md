@@ -16,7 +16,7 @@ This lesson underscored the significance of data pipelines in efficiently managi
 ## Data Structures
 
 **Structured data** is easy to search and organize. Data is entered following a rigid structure, like a spreadsheet where there are set columns. Each column takes values of a certain type, like text, data, or decimal. It makes it easy to form relations, hence it's organized in what is called a relational database. About 20% of the data is structured. SQL, which stands for Structured Query Language, is used to query such data.
-![[Pasted image 20250111201025.png]]
+![](20250111201025.png)
 
 **Semi-structured** data resembles structured data, but allows more freedom. It's therefore relatively easy to organize, and pretty structured, but allows more flexibility. It also has different types and can be grouped to form relations, although this is not as straight forwards as with structured data - you have to pay for that flexibility at some point. Semi-structured data is stored in NoSQL databases (as opposed to SQL) and usually leverages the JSON, XML or YAML file formats.
 ![[Pasted image 20250111200958.png]]
