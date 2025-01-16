@@ -3,7 +3,7 @@ The concept of data pipelines, crucial for managing and processing data efficien
 - **Data as the New Oil**: Just as oil undergoes various processes from extraction to reaching the end consumer, data is processed and moved through pipelines from collection to utilization.
 - **Spotflix Example**: You explored how Spotflix uses data pipelines to handle data from different sources, such as user actions and internal systems, and processes it for various needs like recommendations.
 - **ETL Process**: The term ETL, standing for Extract, Transform, Load, was introduced as a popular framework for designing data pipelines. It highlights the sequential steps of extracting data from sources, transforming it to fit operational needs, and loading it into a destination for storage and analysis.
-	# Example of an ETL process
+# Example of an ETL process
 	 extract_data()
 	 transform_data() 
 	 load_data()
@@ -14,7 +14,6 @@ This lesson underscored the significance of data pipelines in efficiently managi
 
 
 ## Data Structures
-
 **Structured data** is easy to search and organize. Data is entered following a rigid structure, like a spreadsheet where there are set columns. Each column takes values of a certain type, like text, data, or decimal. It makes it easy to form relations, hence it's organized in what is called a relational database. About 20% of the data is structured. SQL, which stands for Structured Query Language, is used to query such data.
 ![](20250111201025.png)
 
@@ -26,7 +25,6 @@ This lesson underscored the significance of data pipelines in efficiently managi
 
 
 ## SQL Databases
-
 ![](20250111201835.png)
 
 Remember the table on first example on the previous course? this is how you would create such table:
@@ -47,7 +45,6 @@ Finally, there are several implementations of SQL. How they differ is out of the
 
 
 ## Data Lakes and Data Warehouses
-
 ![](20250113211249.png)
 
 A data catalog is a source of truth that compensates for the lack of structure in a data lake.
@@ -58,7 +55,6 @@ It's good practice to have a data catalog referencing any data that moves throug
 
 
 ## Processing Data
-
 So what does it mean to "process" data? In a nutshell, data processing consists in converting raw data into meaningful information.
 Storing and processing data is not free, so we want to optimize our memory, process and network costs. Uncompressed data can be ten times larger than compressed one. Some data may come in a type, but would be easier to use in another.
 
@@ -73,7 +69,6 @@ The value they add to the company originates from the insights derived from thei
 
 
 ## Scheduling Data
-
 Scheduling can apply to any task we listed in the previous data processing lesson. Scheduling is the glue of a data engineering system. It holds each small piece and organizes how they work together, by running tasks in a specific order and resolving all dependencies correctly.
 
 There are different ways to glue things together:
@@ -90,7 +85,6 @@ An example of batch vs. stream processing would be offline vs online listening. 
 
 
 ## Parallel Computing
-
 Parallel computing forms the basis of almost all modern data processing tools. It is important mainly for memory concerns, but also for processing power. When big data processing tools perform a processing task, they split it up into several smaller subtasks. These subtasks are then distributed over several computers.
 - One **benefit** of having multiple processing units is the extra processing power itself.
 - Another **benefit** of parallel computing for big data relates to memory. Instead of needing to load all of the data in one computer's memory, you can partition the data and load the subsets into memory of different computers.
@@ -98,7 +92,6 @@ Parallel computing forms the basis of almost all modern data processing tools. I
 
 
 ## Cloud Computing
-
 ![](20250113224914.png)
 Another reason for using cloud computing is database reliability. Running a data-critical company, we have to prepare for the worst. A fire can break out in an on-premises data center. To be safe, we need to replicate our data at a different geographical location. However, if your company manipulates sensitive or confidential data, there is a risk associated with someone else hosting it, and government surveillance.
 
