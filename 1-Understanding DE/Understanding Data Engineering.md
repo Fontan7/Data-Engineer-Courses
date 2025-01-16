@@ -19,42 +19,42 @@ This lesson underscored the significance of data pipelines in efficiently managi
 ![](20250111201025.png)
 
 **Semi-structured** data resembles structured data, but allows more freedom. It's therefore relatively easy to organize, and pretty structured, but allows more flexibility. It also has different types and can be grouped to form relations, although this is not as straight forwards as with structured data - you have to pay for that flexibility at some point. Semi-structured data is stored in NoSQL databases (as opposed to SQL) and usually leverages the JSON, XML or YAML file formats.
-![[Pasted image 20250111200958.png]]
+![](20250111200958.png)
 
 **Unstructured data** is data that does not follow a model and can't be contained in a rows and columns format. This makes it difficult to search and organize. It's usually text, sound, pictures or videos. It's usually stored in data lakes, although it can also appear in data warehouses or databases - don't worry, we will cover the differences between these at the end of this chapter. Most of the data around us is unstructured. Unstructured data can be extremely valuable, but because it's hard to search and organize, this value could not be extracted until recently, with the advent of machine learning and artificial intelligence.
-![[Pasted image 20250111200937.png]]
+![](20250111200937.png)
 
 
 ## SQL Databases
 
-![[Pasted image 20250111201835.png]]
+![](20250111201835.png)
 
 Remember the table on first example on the previous course? this is how you would create such table:
-![[Pasted image 20250111202252.png]]
+![](20250111202252.png)
 We type the command CREATE TABLE, and declare the name of the table, "employees". Then we proceed to create the first column, employee_id, and specify the type of data expected, integers - which mean this column will only accept whole numbers, without any decimal. We then create the second column, first_name, and specify it should be text (VARCHAR stands for "variable characters"). Two-hundred fifty-five here means that the value entered can't be more than Two-hundred fifty-five characters long. And we do the same for last name, role and team. We declare full_time as a Boolean, which is the type for logical values. This column can only hold zero for false or one for true. Office is declared as VARCHAR as well because it's text. Data engineers then run other statements to update the table and write records into it.
 
 Data scientists will then use SQL to query the table. For example, if Julian wants to get the first and last name of all the employees whose role title contains the keyword data, he can select the first and last name, FROM the employees table, WHERE the role title contains data. The percentage signs on each side of "Data" mean "Data" can appear anywhere in the role title.
-![[Pasted image 20250111202532.png]]
+![](20250111202532.png)
 
 So far, we've looked at tables individually; but databases are made of many tables. The database schema governs how tables are related.
 In the Spotflix's database, we have a table for albums, containing columns for the album's unique ID, the artist's unique ID, the title of the album, etc.
 We also have an artist's table, containing columns for the artist unique ID, the artist name and their biography.
 The artist table can the linked to the album's table through the artist ID.
 We also have a songs table with columns for the song unique ID, album ID, song title, etc.
-![[Pasted image 20250111203204.png]]
+![](20250111203204.png)
 
 Finally, there are several implementations of SQL. How they differ is out of the scope of this course, but they are pretty similar. Switching from one to the other is like switching from a QWERTY keyboard to an AZERTY one, or switching from British English to American English. A few things change, but most things stay the same.
 
 
 ## Data Lakes and Data Warehouses
 
-![[Pasted image 20250113211249.png]]
+![](20250113211249.png)
 
 A data catalog is a source of truth that compensates for the lack of structure in a data lake.
 It's good practice in terms of data governance (managing the availability, usability, integrity and security of the data), and guarantees the reproducibility of the processes in case anything unexpected happens. Or if someone wants to reproduce an analysis from the very beginning, starting with the ingestion of the data. Because of the very flexible way data lakes store data, a data catalog is necessary to prevent the data lake becoming a data swamp.
 
 It's good practice to have a data catalog referencing any data that moves through your organization, so that we don't have to rely on tribal knowledge, which makes us autonomous, and makes working with the data more scalable. We can go from finding data to preparing it without having to rely on a human source of information every time we have a question.
-![[Pasted image 20250113211704.png]]
+![](20250113211704.png)
 
 
 ## Processing Data
@@ -65,7 +65,7 @@ Storing and processing data is not free, so we want to optimize our memory, proc
 We want to move and organize data so it is easier for analysts to find what they need, like you saw on the data pipeline graph. Music files also contain metadata, like the name of the artist and the genre. The data is again processed to extract the metadata and store it in a database.
 The value they add to the company originates from the insights derived from their analyses, so we need to help them focus on and deliver exactly that.
 
-![[Pasted image 20250113214610.png]]
+![](20250113214610.png)
 
 - Data Engineers perform data manipulation, cleaning, and tidying tasks that can be automated, and that will always need to be done, regardless of the analysis anyone wants to do with them. For example, rejecting corrupt song files, or deciding what happens with missing metadata.
 - They also ensure that the data is stored in a sanely structured database, and create views on top of the database tables for easy access by analysts. Views are the output of a stored query on the data.
@@ -99,7 +99,7 @@ Parallel computing forms the basis of almost all modern data processing tools. I
 
 ## Cloud Computing
 
-![[Pasted image 20250113224914.png]]
+![](20250113224914.png)
 Another reason for using cloud computing is database reliability. Running a data-critical company, we have to prepare for the worst. A fire can break out in an on-premises data center. To be safe, we need to replicate our data at a different geographical location. However, if your company manipulates sensitive or confidential data, there is a risk associated with someone else hosting it, and government surveillance.
 
 You don't need to take all your cloud services from the same provider though. You can use several ones: it's called multicloud. It has some advantages, like reducing reliance a single vendor. It also optimizes costs, and might be necessary because of local laws. It also allows you to militate against disasters.
