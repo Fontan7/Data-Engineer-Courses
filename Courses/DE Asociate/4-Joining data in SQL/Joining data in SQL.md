@@ -237,3 +237,7 @@ There we have it: the continents with monarchs in our database, and the most rec
 
 ![](20250120233758.png)
 
+## Final challenge result!
+
+![alt text](image.png)
+![alt text](image-1.png)
