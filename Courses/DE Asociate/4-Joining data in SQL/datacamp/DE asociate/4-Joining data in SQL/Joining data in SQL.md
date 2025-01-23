@@ -159,6 +159,7 @@ Advantages:
  - Efficiency: Ideal for comparing rows with computed or aggregated data.
  - Simplicity: Intuitive when you need to filter using a single value or a list.
 
+
 ![](20250120221118.png)
 
 How might we adapt our semi join to determine countries in the Americas founded after 1800? To change our semi join from before to after 1800, we add NOT before the IN statement.
@@ -179,6 +180,7 @@ Advantages:
  - Dynamic calculations: They allow you to add derived columns based on related information.
  - Flexibility: Complement each row with computed values without requiring multiple JOINs.
  - Simplicity: Easier to read than complex joins when fetching derived or related data.
+
 
 Our subquery requires two things. First, it needs to COUNT all monarchs. Second, it needs a WHERE statement matching the continent fields in the two tables. This subquery follows the selection of DISTINCT continents, and will therefore count all monarchs within them in the SELECT statement. A subquery inside a SELECT statement like this requires an alias, like monarch_count here.
 
@@ -205,6 +207,7 @@ Advantages:
  - Data reuse: You can calculate intermediate results and treat them as if they were a table.
  - Clarity: Useful for breaking down complex problems into manageable parts.
  - Advanced aggregation: Great for performing complex calculations or nested queries.
+
 
 We haven't seen yet that we can include multiple tables in a FROM clause by adding a comma between them. In the SQL syntax shown, we include two different tables, left_table and right_table, in our FROM clause.
 
