@@ -22,7 +22,8 @@ Suppose that we're interested in countries that have both a president and prime 
 
 ![](20250119211312.png)
 
-It is common to begin constructing the query with the join first, and selecting fields later. After FROM, we list the left table, followed by the INNER JOIN keyword and the right table. We then specify the field to match the tables on, using the ON keyword. Here, we use the "country" field. Lastly, we add SELECT at the start of the query and choose the fields we want returned. 
+It is common to begin constructing the query with the join first, and selecting fields later. After FROM, we list the left table, followed by the INNER JOIN keyword and the right table. We then specify the field to match the tables on, using the ON keyword. Here, we use the "country" field. Lastly, we add SELECT at the start of the query and choose the fields we want returned.
+
 `When selecting columns that exist in both tables, such as "country" and "continent", the table-dot-column_name format must be used to avoid a SQL error.`
 ![](20250119211425.png)
 
@@ -69,6 +70,7 @@ We perform a right join of prime_ministers on the left and presidents on the rig
 
 ### FULL JOIN
 A FULL JOIN combines a LEFT JOIN and a RIGHT JOIN. As you can see in this diagram, no values are faded out as they were in earlier diagrams. This is because the FULL JOIN will return all ids, irrespective of whether they have a match in the other table being joined.
+
 `Note that this time, nulls can appear in either left_value or right_value fields.`
 
 ![](20250120003107.png)
@@ -88,6 +90,7 @@ In this diagram we have two tables named table1 and table2, with one field each:
 
 Suppose that all prime ministers in Asia from our database are scheduled for individual meetings with all presidents in South America from our database, and we are journalists who wish to follow all the meetings that will happen.
 We use a WHERE clause to focus only on prime ministers from Asia and presidents from South America. The results of the query give us all possible pairings of the four prime ministers from Asia in the prime_ministers table, and the two presidents from South America in the presidents table.
+
 `Note that the syntax is very minimal, and we do not specify ON or USING with CROSS JOIN.`
 
 ![](20250120005414.png)
@@ -123,6 +126,7 @@ In SQL, the UNION operator takes two tables as input, and returns all records fr
 In SQL, there is a further operator for unions called UNION ALL. It will include duplicate records.
 
 We perform a SELECT statement on our first table, a SELECT statement on our second table, and specify a set operation (in this example, either UNION or UNION ALL) between them.
+
 `Note that set operations do not require a field to join ON.`
 
 ![](20250120160645.png)
@@ -141,6 +145,7 @@ In INNER JOIN, similar to INTERSECT, only results where both fields match are re
 
 ### EXCEPT
 EXCEPT allows us to identify the records that are present in one table, but not the other. More specifically, it retains only records from the left table that are not present in the right table.
+
 `Note that while the id 4 does exist in the right_table, the whole record does not match, which is why the last record of left_table is not faded out.`
 
 ![](20250120162809.png)
