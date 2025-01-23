@@ -76,7 +76,9 @@ A FULL JOIN combines a LEFT JOIN and a RIGHT JOIN. As you can see in this diagra
 ![](20250120003107.png)
 
 Suppose we were interested in all the countries in our database, and wanted to check whether they had a president, a prime minister, or both. We'll walk through the code line by line to do this using a FULL JOIN.
+
 `Note that order of the tables matters here, and if we switched the order, the records would be ordered differently depending on how prime ministers and presidents are ordered in the tables.`
+
 We chose a FULL JOIN because we were interested in all countries, whether they had a prime minister, a president, or both.
 
 ![](20250120003825.png)
