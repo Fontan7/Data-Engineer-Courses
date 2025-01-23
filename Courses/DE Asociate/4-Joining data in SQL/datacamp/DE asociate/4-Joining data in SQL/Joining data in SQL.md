@@ -101,6 +101,105 @@ The results are a pairing of each country with every other country in the same c
 
 ![](20250120011141.png)
 
-To fix this, recall the use of the AND clause to ensure multiple conditions are met in the ON clause. In our second condition, we use the not equal to operator (`<>`, `NOT EQUAL` or `!=`) to exclude records where the p1-dot-country and p2-dot-country fields ar
+To fix this, recall the use of the AND clause to ensure multiple conditions are met in the ON clause. In our second condition, we use the not equal to operator (`<>`, `NOT EQUAL` or `!=`) to exclude records where the p1-dot-country and p2-dot-country fields are identical.
+
 ![](20250120011404.png)
 ![](20250120011651.png)
+
+
+## Set theory for SQL joins
+SQL has three main set operations, UNION, INTERSECT and EXCEPT. We can think of each circle as representing a table. The green parts represent what is included after the set operation is performed on each pair of tables.
+For all set operations, the number of selected columns and their respective data types must be identical. For instance, we can't stack a number field on top of a character field.
+The result will only use field names (or aliases, if used) of the first SELECT statement in the query.
+
+![](20250120160113.png)
+
+### UNION
+In SQL, the UNION operator takes two tables as input, and returns all records from both tables. If two records are identical, UNION only returns them once.
+In SQL, there is a further operator for unions called UNION ALL. It will include duplicate records.
+
+We perform a SELECT statement on our first table, a SELECT statement on our second table, and specify a set operation (in this example, either UNION or UNION ALL) between them.
+`Note that set operations do not require a field to join ON.`
+
+![](20250120160645.png)
+
+### INTERSECT
+INTERSECT takes two tables as input, and returns only the records that exist in both tables.
+
+![](20250120161824.png)
+
+We perform a SELECT statement on our first table, a SELECT statement on our second table, and specify our set operator between them.
+Similar to UNION, for a record to be returned, INTERSECT requires all fields to match, since in set operations we do not specify any fields to match on.
+In INNER JOIN, similar to INTERSECT, only results where both fields match are returned. INNER JOIN will return duplicate values, whereas INTERSECT will only return common records once.
+
+![](20250120162314.png)
+
+
+### EXCEPT
+EXCEPT allows us to identify the records that are present in one table, but not the other. More specifically, it retains only records from the left table that are not present in the right table.
+`Note that while the id 4 does exist in the right_table, the whole record does not match, which is why the last record of left_table is not faded out.`
+
+![](20250120162809.png)
+
+Let's say we were interested in monarchs that do NOT also hold the title of prime minister. The EXCEPT clause is really handy for this! The SQL code shown selects the monarch and country field from monarchs and then looks for common entries in the prime_minister and country fields in the prime_ministers table, looking to exclude those entries. In the result, we see only the three monarchs from our leaders database who **do not** also serve the role of prime minister.
+
+![](20250120163122.png)
+
+
+## Subqueries
+
+### Inside WHERE
+This is called a subquery! It chooses records in the first table where the country matches the list returned by our subquery. Since Spain does not have a president, only the Portuguese president is listed.
+
+![](20250120221118.png)
+
+How might we adapt our semi join to determine countries in the Americas founded after 1800? To change our semi join from before to after 1800, we add NOT before the IN statement.
+We add to our first WHERE clause to filter for continents in the Americas. The result shows presidents of countries in the Americas that gained independence after 1800.
+
+![](20250120221447.png)
+
+`Note: notice how the select in the sub query is the same **TYPE** as the one in the where clause from the parent query`
+
+Subqueries inside WHERE can be from the same table or from a different table, and here, the subquery is from a different table.
+The WHERE clause is the most common place for subqueries, because filtering data is one of the most common data manipulation tasks.
+
+### Inside SELECT
+The second most common type of subquery is inside a SELECT clause.
+Our subquery requires two things. First, it needs to COUNT all monarchs. Second, it needs a WHERE statement matching the continent fields in the two tables. This subquery follows the selection of DISTINCT continents, and will therefore count all monarchs within them in the SELECT statement. A subquery inside a SELECT statement like this requires an alias, like monarch_count here.
+
+![](20250120223522.png)
+
+Interesting Query, note the operation performed using the subquery result.
+![](20250120225738.png)
+
+Important, this was tricky for me.
+![](20250120231911.png)
+![](20250120231925.png)
+
+`Note how I had to Group by the countries.name before doing the order by, why? because I need to work with numbers, in this case the aggregate function from the select COUNT(cities.name)`
+
+Here is the same query as before but leveraging subqueries!
+![](20250120232503.png)
+
+### Inside FROM
+The last type of subquery we'll cover is a query inside a FROM clause.
+
+We haven't seen yet that we can include multiple tables in a FROM clause by adding a comma between them. In the SQL syntax shown, we include two different tables, left_table and right_table, in our FROM clause.
+
+![](20250120233215.png)
+
+We can drop duplicates using the DISTINCT command in the query shown.
+
+![](20250120233233.png)
+
+#### Example
+We can nest the subquery we initially wrote into a FROM statement, so that we are selecting from both monarchs and our subquery, aliased as "sub".
+We also use the WHERE clause as before to identify records in both tables that match on continent.
+As we saw on the previous slide, because the continents from our subquery will find multiple matches in monarchs, this match will return duplicates.
+As before, in our SELECT statement, we use the DISTINCT command to drop duplicate continents, and select sub.most_recent to get the most recent independence year for each continent.
+Lastly, we ORDER BY continent.
+
+There we have it: the continents with monarchs in our database, and the most recent year of independence in those continents.
+
+![](20250120233758.png)
+
