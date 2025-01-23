@@ -37,9 +37,11 @@ A powerful feature of SQL is that multiple joins can be combined and run in a si
 We begin with the same INNER JOIN as before, and then chain another INNER JOIN to the result of our first INNER JOIN. 
 
 We can continue the chain and join as many tables together as we need!
+
 ![](20250119220723.png)
 
 We can limit the records returned by supplying an additional field to join on by adding the AND keyword to our ON clause. In this example, we join on date, a frequently used second column when joining on multiple fields. The result set now contains records that match on both id AND date.
+
 ![](20250119220928.png)
 
 ## LEFT and RIGHT joins
@@ -173,6 +175,7 @@ Interesting Query, note the operation performed using the subquery result.
 ![](20250120225738.png)
 
 Important, this was tricky for me.
+
 ![](20250120231911.png)
 ![](20250120231925.png)
 
