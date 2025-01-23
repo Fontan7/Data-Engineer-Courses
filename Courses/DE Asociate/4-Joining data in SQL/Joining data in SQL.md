@@ -1,4 +1,4 @@
-## Defining relationships
+# Defining relationships
 Joining data is an essential skill which enables us to draw information from separate tables together into a single, meaningful set of results.
 
 - One-to-many relationship.  This is the most common type of relationship, one where a single entity can be associated with several entities. Think about a music library. One artist can produce many songs over their career. This is a one-to-many relationship. In the table schema shown, each of her works are stored in the books table, and can be merged with the authors table using author_id from both tables.
