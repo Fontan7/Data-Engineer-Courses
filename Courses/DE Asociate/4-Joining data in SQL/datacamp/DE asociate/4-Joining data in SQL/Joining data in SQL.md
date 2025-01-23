@@ -153,6 +153,12 @@ Let's say we were interested in monarchs that do NOT also hold the title of prim
 ### Inside WHERE
 This is called a subquery! It chooses records in the first table where the country matches the list returned by our subquery. Since Spain does not have a president, only the Portuguese president is listed.
 
+Subqueries in the WHERE clause are used to filter rows in the main query based on the results of another query. They typically return a single value or a list of values.
+Advantages:
+ - Advanced filtering: They allow you to filter data based on dynamically calculated or related values.
+ - Efficiency: Ideal for comparing rows with computed or aggregated data.
+ - Simplicity: Intuitive when you need to filter using a single value or a list.
+
 ![](20250120221118.png)
 
 How might we adapt our semi join to determine countries in the Americas founded after 1800? To change our semi join from before to after 1800, we add NOT before the IN statement.
@@ -167,6 +173,13 @@ The WHERE clause is the most common place for subqueries, because filtering data
 
 ### Inside SELECT
 The second most common type of subquery is inside a SELECT clause.
+
+Subqueries in the SELECT clause calculate additional values for each row in the main query. They generally return a single value per row.
+Advantages:
+ - Dynamic calculations: They allow you to add derived columns based on related information.
+ - Flexibility: Complement each row with computed values without requiring multiple JOINs.
+ - Simplicity: Easier to read than complex joins when fetching derived or related data.
+
 Our subquery requires two things. First, it needs to COUNT all monarchs. Second, it needs a WHERE statement matching the continent fields in the two tables. This subquery follows the selection of DISTINCT continents, and will therefore count all monarchs within them in the SELECT statement. A subquery inside a SELECT statement like this requires an alias, like monarch_count here.
 
 ![](20250120223522.png)
@@ -186,6 +199,12 @@ Here is the same query as before but leveraging subqueries!
 
 ### Inside FROM
 The last type of subquery we'll cover is a query inside a FROM clause.
+
+Subqueries in the FROM clause act as temporary tables. They allow the results of one query to be used as the base for the main query.
+Advantages:
+ - Data reuse: You can calculate intermediate results and treat them as if they were a table.
+ - Clarity: Useful for breaking down complex problems into manageable parts.
+ - Advanced aggregation: Great for performing complex calculations or nested queries.
 
 We haven't seen yet that we can include multiple tables in a FROM clause by adding a comma between them. In the SQL syntax shown, we include two different tables, left_table and right_table, in our FROM clause.
 
