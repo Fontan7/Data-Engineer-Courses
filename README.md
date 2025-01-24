@@ -6,4 +6,4 @@
 4. [Joining data in SQL](Courses/DE%20Asociate/4-Joining%20data%20in%20SQL/Joining%20data%20in%20SQL.md)
 
 ### Projects
-1.
+1. [Analyzing students mental health](Courses/DE%20Asociate/Projects/analyzing-students-mental-health/exercise.md)
