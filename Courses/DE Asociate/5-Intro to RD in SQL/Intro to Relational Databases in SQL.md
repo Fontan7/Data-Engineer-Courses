@@ -196,11 +196,55 @@ Another strategy for creating a surrogate key is to combine two existing columns
 
 ### Referential integrity constraints / Foreign Keys
 Foreign keys are designated columns that point to a primary key of another table. There are some restrictions for foreign keys.
+
 First, the domain and the data type must be the same as one of the primary key.
 Secondly, only foreign key values are allowed that exist as values in the primary key of the referenced table.
 This is the actual foreign key constraint, also called "referential integrity".
-
 Lastly, a foreign key is not necessarily an actual key, because duplicates and "NULL" values are allowed.
 
+![](image-8.png)
+`As you can see, the column "university_shortname" of "professors" has the same domain as the "id" column of the "universities" table. If you go through each record of "professors", you can always find the respective "id" in the "universities" table. So both criteria for a foreign key in the table "professors" referencing "universities" are fulfilled. Also, you see that "university_shortname" is not really a key because there are duplicates. For example, the id "EPF" and "UBE" occur three times each.`
 
+When you create a new table, you can specify a foreign key similarly to a primary key.
+
+First, we create a "manufacturers" table with a primary key called "name". Then we create a table "cars", that also has a primary key, called "model".
+As each car is produced by a certain manufacturer, it makes sense to also add a foreign key to this table. We do that by writing the "REFERENCES" keyword, followed by the referenced table and its primary key in brackets.
+
+![](image-9.png)
+
+`From now on, only cars with valid and existing manufacturers may be entered into that table. Trying to enter models with manufacturers that are not yet stored in the "manufacturers" table won't be possible, thanks to the foreign key constraint.`
+
+![](image-10.png)
+
+*Again, the syntax for adding foreign keys to existing tables is the same as the one for adding primary keys and unique constraints.*
+
+![](image-11.png)
+
+#### N:M Relations / Many to Many
+This is an N:M relationship, not an 1:N relationship as with professors and universities. This depicts the fact that a professor can be affiliated with more than one organization and vice versa. 
+Also, it has an own attribute, the function. Remember that each affiliation comes with a function, for instance, "chairman".
+
+![](image-12.png)
+
+Such a relationship is implemented with an ordinary database table that contains two foreign keys that point to both connected entities. 
+In this case, that's a foreign key pointing to the "professors.id" column, and one pointing to the "organizations.id" column.
+
+![](image-13.png)
+
+`One last thing: Notice that no primary key is defined here because a professor can theoretically have multiple functions in one organization.`
+
+#### Referential integrity
+Referential integrity is a constraint that always concerns two tables, and is enforced through foreign keys. In other words: A record in table A cannot point to a record in table B that does not exist.
+
+So if you define a foreign key in the table "professors" referencing the table "universities", referential integrity is held from "professors" to "universities".
+Referential integrity can be violated in two ways:
+- if a record in table B that is already referenced from table A is deleted, you have a violation.
+- if you try to insert a record in table A that refers to something that does not exist in table B, you also violate the principle.
+`that's the main reason for foreign keys – they will throw errors and stop you from accidentally doing these things.`
+
+However, throwing an error is not the only option. If you specify a foreign key on a column, you can actually tell the database system what should happen if an entry in the referenced table is deleted.
+
+![](image-14.png)
+
+![](image-15.png)
 
