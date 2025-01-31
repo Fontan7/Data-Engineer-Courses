@@ -94,3 +94,103 @@ You can also drop tables. This is done with the "DROP TABLE" command followed by
 
 ![](222111.png)
 
+
+## Database Constraints
+
+The idea of a database is to push data into a certain structure – a pre-defined model, where you enforce data types, relationships, and other rules. Generally, these rules are called integrity constraints, although different names exist.
+
+Integrity constraints can roughly be divided into three types:
+- Attribute contraints, e.g.; a certain attribute, represented through a database column, could have the integer data type, allowing only for integers to be stored in this column.
+- Key constraints, e.g.; Primary keys, for example, uniquely identify each record, or row, of a database table.
+- Referential integrity constraints. In short, they glue different database tables together.
+
+### Attribute constraints / Data types
+
+In its simplest form, attribute constraints are data types that can be specified for each column of a table.
+
+There are basic data types for numbers, such as "bigint", or strings of characters, such as "character varying". There are also more high-level data types like "cidr", which can be used for IP addresses. Implementing such a type on a column would disallow anything that doesn't fit the structure of an IP.
+
+Data types also restrict possible SQL operations on the stored data. For example, it is impossible to calculate a product from an integer *and* a text column, as shown here in the example.
+
+![](11111.png)
+
+The solution for this is type casts, that is, on-the-fly type conversions. In this case, you can use the "CAST" function, followed by the column name, the AS keyword, and the desired data type, and PostgreSQL will turn "wind_speed" into an integer right before the calculation.
+
+![](111222.png)
+
+![](image.png)
+![](image2.png)
+
+Altering types after table creation is also straightforward, just use the shown "ALTER TABLE ALTER COLUMN" statement.
+
+Sometimes it may be necessary to truncate column values or transform them in any other way, so they fit with the new data type. Then you can use the "USING" keyword, and specify a transformation that should happen before the type is altered.
+
+![](12312412.png)
+
+
+#### NULL
+"NULL" can mean a couple of things, for example, that the value is unknown, or does not exist at all. It can also be possible that a value does not apply to the column.
+
+`Comparing "NULL" with "NULL" always results in a "FALSE" value.`
+
+![](1241241.png)
+![](1231231.png)
+
+#### UNIQUE
+The unique constraint on a column makes sure that there are no duplicates in a column. So any given value in a column can only exist once.
+
+![](1231.png)
+![](123.png)
+
+### Keys and Superkeys
+Typically a database table has an attribute, or a combination of multiple attributes, whose values are unique across the whole table. Such attributes identify a record uniquely.
+
+Normally, a table, as a whole, only contains unique records, meaning that the combination of all attributes is a key in itself. However, it's not called a key, but a superkey, if attributes from that combination can be removed, and the attributes still uniquely identify records.
+If all possible attributes have been removed but the records are still uniquely identifiable by the remaining attributes, we speak of a minimal superkey.
+This is the actual key. So a key is always minimal.
+
+![](image-1.png)
+The table shows six different cars, so the combination of all attributes is a superkey. If we remove the "year" attribute from the superkey, the six records are still unique, so it's still a superkey.
+
+![](image-2.png)
+However, there are only four minimal superkeys, and these are "license_no", "serial_no", and "model", as well as the combination of "make" and "year".
+
+These four minimal superkeys are also called candidate keys. In the end, there can only be one key for the table, which has to be chosen from the candidates.
+
+#### Primary keys
+Primary keys are one of the most important concepts in database design. Almost every database table should have a primary key – chosen by you from the set of candidate keys.
+
+The main purpose, as already explained, is uniquely identifying records in a table. This makes it easier to reference these records from other tables.
+
+Primary keys need to be defined on columns that don't accept duplicate or null values. Lastly, primary key constraints are time-invariant, meaning that they must hold for the current data in the table – but also for any future data that the table might hold. It is therefore wise to choose columns where values will always be unique and not null.
+
+![](image-3.png)
+
+`Ideally, though, primary keys consist of as few columns as possible!`
+
+These two tables accept exactly the same data, however, the latter has an explicit primary key specified.
+
+![](image-4.png)
+
+Adding primary key constraints to existing tables is the same procedure as adding unique constraints. As with unique constraints, you have to give the constraint a certain name.
+
+![](image-5.png)
+
+#### Surrogate keys
+Surrogate keys are sort of an artificial primary key. In other words, they are not based on a native column in your data, but on a column that just exists for the sake of having a primary key.
+
+If you define an artificial primary key, ideally consisting of a unique number or string, you can be sure that this number stays the same for each record. Other attributes might change, but the primary key always has the same value for a given record.
+
+There's a special data type in PostgreSQL that allows the addition of auto-incrementing numbers to an existing table: the "serial" type. It is specified just like any other data type. Once you add a column with the "serial" type, all the records in your table will be numbered. Whenever you add a new record to the table, it will automatically get a number that does not exist yet.
+
+`Also, if you try to specify an ID that already exists, the primary key constraint will prevent you from doing so.`
+
+![](image-6.png)
+
+
+Another strategy for creating a surrogate key is to combine two existing columns into a new one. In this example, we first add a new column with the "varchar" data type. We then "UPDATE" that column with the concatenation of two existing columns. The "CONCAT" function glues together the values of two or more existing columns. Lastly, we turn that new column into a surrogate primary key.
+
+`I personally would try to not use this method`
+
+![](image-7.png)
+
