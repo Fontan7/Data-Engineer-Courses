@@ -194,3 +194,13 @@ Another strategy for creating a surrogate key is to combine two existing columns
 
 ![](image-7.png)
 
+### Referential integrity constraints / Foreign Keys
+Foreign keys are designated columns that point to a primary key of another table. There are some restrictions for foreign keys.
+First, the domain and the data type must be the same as one of the primary key.
+Secondly, only foreign key values are allowed that exist as values in the primary key of the referenced table.
+This is the actual foreign key constraint, also called "referential integrity".
+
+Lastly, a foreign key is not necessarily an actual key, because duplicates and "NULL" values are allowed.
+
+
+
