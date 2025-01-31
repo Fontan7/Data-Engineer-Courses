@@ -1,5 +1,5 @@
-## Table of Contents
-### Associate Data Engineer in SQL
+# Table of Contents
+## Associate Data Engineer in SQL
 #### Summaries
 1. [Introduction to Data engineering](Courses/DE%20Asociate/1-Understanding%20DE/Understanding%20Data%20Engineering.md)
 2. [Introduction to SQL](Courses/DE%20Asociate/2-Introduction%20to%20SQL/Intro%20to%20SQL.md)
@@ -13,7 +13,7 @@
 #### Certificate
 
 
-### Data Engineer in Python
+## Data Engineer in Python
 #### Summaries
 1. 
 
