@@ -83,7 +83,7 @@ There are three levels to a data model:
 3. A **physical** data model looks at how data will be physically stored at the lowest level of abstraction.
     - partitions, CPUs, indexes, backups and tablespaces.
 <br>
-<br>
+
 #### Relational model:
 ![](image-6.png)
 
