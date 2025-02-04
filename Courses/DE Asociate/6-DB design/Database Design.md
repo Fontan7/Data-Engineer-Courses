@@ -84,7 +84,6 @@ There are three levels to a data model:
     - partitions, CPUs, indexes, backups and tablespaces.
 <br>
 <br>
-
 #### Relational model:
 ![](image-6.png)
 
