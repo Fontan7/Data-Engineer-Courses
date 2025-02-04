@@ -1,5 +1,6 @@
 ![task](image.png)
+<br>
 
-**SOLUTION**
+**SOLUTION:**
 <br>
 ![solution](image-1.png)
