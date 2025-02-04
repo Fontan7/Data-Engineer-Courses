@@ -84,6 +84,7 @@ There are three levels to a data model:
     - partitions, CPUs, indexes, backups and tablespaces.
 <br>
 <br>
+
 #### Relational model:
 ![](image-6.png)
 
@@ -93,6 +94,8 @@ Or, you could add tables for genre and label. Many songs share these attributes,
 The biggest difference here is how the tables are determined.
 
 ![](image-7.png)
+<br>
+<br>
 
 #### Dimensional model:
 Dimensional modeling is an adaptation of the relational model specifically **for data warehouses**. <br>
@@ -108,7 +111,8 @@ The turquoise table is a fact table called songs. It contains foreign keys to pu
 ![](image-8.png)
 
 `Summing it up, to decide the fact table in a dimensional model, consider what is being analyzed and how often entities change.`
-
+<br>
+<br>
 
 ## Database Schemas and Normalization
 ### Star schema / Kimball
@@ -136,14 +140,14 @@ Normalization is a technique that divides tables into smaller tables and connect
 
 The basic idea is to identify repeating groups of data and create new tables for them.
 Here's the book dimension in the star schema. What could be repeating here? 
+
 ![](image-11.png)
 
 Primary keys are inherently unique. For book titles, although there is possible repeat here, it is not common. On the other hand, authors often publish more than one book, publishers definitely publish many books, and a lot of books share genres. <br>
- We can create new tables for them, and it results in the following snowflake schema:
+ We can create new tables for them, and it results in the following snowflake schema:<br>
+ `note how these repeating groups now have their own table`
 
  ![](image-12.png)
-
- `note how these repeating groups now have their own table`
 <br>
 <br>
 
@@ -164,7 +168,7 @@ So why would we want to normalize a database?
 
 1. **Normalization saves space.** This isn't intuitive seeing how normalized databases have more tables. <br>
 Here we see a lot of repeated information in bold - such as USA, California, New York, and Brooklyn. This type of denormalized structure enables a lot of data redundancy.<br>
-![](image-15.png)
+![](image-15.png)<br>
 If we normalize that previous schema, we get this: We see that although we are using more tables, **there is no data redundancy**. The string, Brooklyn, is only stored once. And the state records are stored separately because many cities share the same state, and country.<br>
 ![](image-16.png)
 
@@ -173,6 +177,8 @@ First, it enforces data consistency.<br>
 Data entry can get messy, and at times people will fill out fields differently. Since the states are already entered in a table, we can ensure naming conventions through referential integrity.<br>
 Secondly, because duplicates are reduced, modification of any data becomes safer and simpler.<br>
 Lastly, since tables are smaller and organized more by object, its easier to alter the database schema.
+<br>
+<br>
 
 #### Normal Forms
 There are different extents to which you can normalize. These are called normal forms. Below is a list of them from least to most normalized. Each has its own set of rules, and some build on top of each other. We'll only cover the first three normal forms.
@@ -185,6 +191,7 @@ There are different extents to which you can normalize. These are called normal 
 ![1nf](image-18.png)
 All these rows are unique, but the courses_completed column has more than one course in two records.
 To rectify this, we can split the original table as such. Now, all the records are unique and each column has one value.
+
 ![1nf-b](image-19.png)
 <br>
 <br>
@@ -192,6 +199,7 @@ To rectify this, we can split the original table as such. Now, all the records a
 ![2nf](image-20.png)
 In this table, we have the student and course id as a composite primary key. We then review the other columns and their dependence on these two keys. First is the instructor, which isn't dependent on the student_id - only the course_id. Meaning an instructor solely depends on the course, not the students who take the course. The same goes for the instructor_id column. However, the percent completed is dependent on both the student and the course id.<br>
 To convert it, we can create two new tables that satisfy the conditions of 2NF.
+
 ![2nf-b](image-21.png)
 <br>
 <br>
@@ -199,6 +207,7 @@ To convert it, we can create two new tables that satisfy the conditions of 2NF.
 ![3nf](image-22.png)
 3NF doesn't allow transitive dependencies. This means that non-primary key columns can't depend on other non-primary key columns. Let's take a look at an example. Course_id is the primary key so we can ignore this column. Instructor_id and Instructor definitely depend on each other. Tech does not depend on the instructor as an instructor can teach different technologies.<br>
 We can replace the table from before into these two tables to meet 3NF criteria. These tables have no transitive dependencies and they also meet 2NF as there are no composite primary keys.
+
 ![3nf-b](image-23.png)
 <br>
 <br>
