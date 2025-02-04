@@ -8,10 +8,10 @@
 6. [Database Design](Courses/DE%20Asociate/6-DB%20design/Database%20Design.md)
 
 ### Exercises
-[Extending dimensions](Courses/DE%20Asociate/Exercises/extending-dimensions.md) <br>
-[Foreign keys star model](Courses/DE%20Asociate/Exercises/foreign-keys-star-model.md) <br>
-[Quering Snowflake shcema](Courses/DE%20Asociate/Exercises/querying-snowflake-schema.md) <br>
-[Quering Star schema](Courses/DE%20Asociate/Exercises/querying-star-schema.md) <br>
+1. [Extending dimensions](Courses/DE%20Asociate/Exercises/extending-dimensions.md) <br>
+2. [Foreign keys star model](Courses/DE%20Asociate/Exercises/foreign-keys-star-model.md) <br>
+3. [Quering Snowflake shcema](Courses/DE%20Asociate/Exercises/querying-snowflake-schema.md) <br>
+4. [Quering Star schema](Courses/DE%20Asociate/Exercises/querying-star-schema.md) <br>
 
 ### Projects
 1. [Analyzing students mental health](Courses/DE%20Asociate/Projects/analyzing-students-mental-health/exercise.md)
