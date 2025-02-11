@@ -1,6 +1,5 @@
 # Analyzing students mental health
-
-## Problem
+### Problem
 - Explore and analyze the students data to see how the length of stay (stay) impacts the average mental health diagnostic scores of the international students present in the study.
 
     - Return a table with nine rows and five columns.
