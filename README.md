@@ -14,6 +14,8 @@
 4. [Quering Star schema](Courses/DE%20Asociate/Exercises/querying-star-schema.md) <br>
 5. [Redefining a View](Courses/DE%20Asociate/Exercises/redefining-a-view.md) <br>
 6. [Creating & Refreshing a Materialized View](Courses/DE%20Asociate/Exercises/creating-and-refreshing-materialized-view.md) <br>
+7. [Creating vertical partitions](Courses/DE%20Asociate/Exercises/creating-vertical-partitions.md) <br>
+8. [Creating horizontal partitions](Courses/DE%20Asociate/Exercises/creating-horizontal-partitions.md) <br>
 
 ### Bonus Projects
 1. [Analyzing students mental health](Courses/DE%20Asociate/Projects/analyzing-students-mental-health/exercise.md)
