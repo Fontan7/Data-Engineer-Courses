@@ -342,9 +342,121 @@ For example, let's say you have two materialized views: X and Y. Y uses X in its
 This creates a dependency chain when refreshing views.<br> **Scheduling when to refresh is not trivial**. <br>
 Refreshing them all at the same time is not the most efficient when you consider query time and dependencies.
 
-Companies that have many materialized views, use directed acyclic graphs (**DAG** finite directed graph with no cycles) to track dependencies and pipeline scheduler tools, like Airflow and Luigi, to schedule and run REFRESH statements.
+Companies that have many materialized views, use directed acyclic graphs (**DAG**: finite directed graph with no cycles) to track dependencies and pipeline scheduler tools, like Airflow and Luigi, to schedule and run REFRESH statements.
 
 ![alt text](image-40.png)<br>
 `Here, you can see an example where the directed arrows reflect a dependency in a certain direction where one node depends on another. The no cycles part is important because two views can't depend on each other - only one can rely on another.`
 
 ## Database Roles and Access Control
+### Roles
+Roles are used to manage database access permissions. A database role is an entity that contains information that Firstly, **define its privileges**, like whether that role can login, create databases, and many more, and Secondly, interact with the **client authentication** system, like what the role's password is.<br>
+
+Roles can be assigned to one or more users. Since roles are global, you can reference roles across all individual databases in your cluster.
+
+### Create a role
+You can create the data_analyst role with the CREATE ROLE SQL command. The information that defines what the data_analyst role can do is currently empty.<br>
+We can also set some, but not all, of this information when creating a role, too.<br>
+![alt text](image-41.png)
+
+- Say you're hiring an intern whose internship ends at the end of the year. You create the role intern, specifying the password attribute and valid until date attribute.<br>
+![alt text](image-42.png)
+
+- Say you want to create an admin role with the ability to create databases: create role admin with the attribute CREATEDB.<br>
+![alt text](image-43.png)
+
+- To change an attribute for an already created role, you use the ALTER keyword, here allowing the admin role to create roles too.<br>
+![alt text](image-44.png)
+<br>
+<br>
+
+### Grant and Revoke privileges from roles
+To grant specific access control privileges on objects, like tables, views, and schemas, you use GRANT and REVOKE. <br>
+
+![alt text](image-45.png)
+
+### Users and Groups
+a common misunderstanding: a role can be a user role or a group role. A role may be a member of other roles, and we call the larger role a group. As this graphic shows, the concept of roles encompasses the concepts of “users” and “groups”.<br>
+
+Think of the data_analyst role as a group role: you want all of your data analysts to have the same level of access. <br>
+Think of the intern role as a user role. Sometimes you'll use the actual user's name.<br>
+
+In PostgreSQL, to add the user role alex to the group role data_analyst, you write GRANT data_analyst TO alex. Alex can do data analyst work now! If Alex no longer needs to do that type of work, use REVOKE to remove them from the group.<br>
+
+![alt text](image-46.png)
+
+`PostgreSQL has a set of default roles which provide access to commonly needed privileged capabilities and information.`
+
+## Table Partitioning
+When tables grow — we're talking hundreds of gigabytes or even terabytes here — queries tend to become slow.<br>
+Even when we've set indices correctly, these indices can become so large they don't fit into memory. At a certain point, it can make sense to split a table up into multiple smaller parts. We call the process of doing this 'partitioning'.<br>
+
+`Note that, looking at the data modeling layers we saw in the first chapter, partitioning fits into the physical data model. Indeed, logically, the data you'll access or update is still the same. The difference is we distribute the data over several physical entities.`
+<br>
+<br>
+
+### Vertical partitioning
+Vertical partitioning goes one step further and splits up a table vertically by its columns, even when it's already fully normalized.<br>
+
+After vertical partitioning, you could end up with two tables: one for the first three columns, and another for the last column. We can link them through a shared key.<br>
+Let's say the fourth column, containing a long description, is retrieved very rarely. We could store the second table on a slower medium. Doing this would improve query time for the first table, as we need to scan less data for search queries.<br>
+
+![alt text](image-48.png)
+<br>
+<br>
+
+### Horizontal partitioning
+Instead of splitting tables up over the columns, you can also split up tables over the rows. For example, you could split up data according to a timestamp. Specifically, all records related to 2019 could be in a separate partition from the ones of 2018.<br>
+
+![alt text](image-49.png)
+
+First, you add the PARTITION BY clause to your table creation statement. You pass it the column you want to partition by, 'timestamp' in our case.<br>
+Next, you have to create the partitions. To do this, use the PARTITION OF clause to create tables for the specific partitions.<br>
+You can specify rules to partition by in the same statement. For a timestamp, you could use particular ranges of values.<br>
+`It's advised to add an index to the column you used for partitioning.`
+
+![alt text](image-50.png)
+
+Pros:
+- Horizontal partitioning can help by optimizing indices, increasing the chance heavily-used parts of the index fit in memory.
+- You could also move rarely accessed partitions to a slower medium. 
+- Both OLAP and OLTP can benefit from partitioning.
+
+Cons:
+- Partitioning an existing table can be a hassle: you have to create a new table and copy over the data.
+- We can not always set the same type of constraints on a partitioned table, for example, the PRIMARY KEY constraint.
+
+We can take partitioning one step further and distribute the partitions over several machines. When horizontal partitioning is applied to spread a table over several machines, it's called **sharding**. 
+
+## Picking a Database Management System
+### SQL
+A SQL DBMS, also called a Relational DataBase Management System, is a kind of DBMS based on the relational data model.<br>
+
+Some examples of RDBMSs include SQL Server, PostgreSQL, and Oracle SQL. There are two reasons why you might consider an RDBMS. It's a good option when working with structured, unchanging data that will benefit from a predefined schema. Or if all data must be consistent without leaving room for error, such as with accounting systems for example.<br>
+
+![sql](image-51.png)
+
+### NoSQL
+Non-relational DBMSs are called NoSQL DBMSs. They’re much less structured than relational databases, and are document-centered, rather than table-centered. Data in NoSQL databases don’t have to fit into well-defined rows and columns.<br>
+
+NoSQL is a good choice for those companies experiencing rapid data growth with no clear schema definitions. NoSQL offers much more flexibility than a SQL DBMS and is a solid option for companies who must analyze large quantities of data or manage data structures that vary. NoSQL DBMSs are generally classified as one of four types: key-value store, document store, columnar, or graph databases.
+
+#### Key-value store
+A key-value database stores combinations of keys and values. The key serves as a unique identifier to retrieve an associated value. Values can be anything from simple objects, like integers or strings, to more complex objects, like JSON structures. They are most frequently used for managing session information in web applications. For example, managing shopping carts for online buyers. An example DBMS is Redis.<br>
+
+![alt text](image-52.png)
+
+#### Document store
+Document stores are similar to key-value in that they consist of keys, each corresponding to a value. The difference is that the stored values, referred to as documents, provide some structure and encoding of the managed data. That structure can be used to do more advanced queries on the data instead of just value retrieval. A document database is a great choice for content management applications such as blogs and video platforms. Each entity that the application tracks can be stored as a single document. An example of a document store DBMS is mongoDB.<br>
+
+![alt text](image-53.png)
+
+#### Columnar db
+Rather than grouping columns together into tables, columnar databases store each column in a separate file in the system’s storage. This allows for databases that are more scalable, and faster at scale. Use a columnar database for big data analytics where speed is important. An example is Cassandra.<br>
+
+![alt text](image-54.png)
+
+#### Graph db
+Here, the data is interconnected and best represented as a graph. This method is capable of lots of complexity. Graph databases are used by most social networks and pretty much any website that recommends anything based on your behavior. An example of a graph DBMS is Neo4j.<br>
+
+![alt text](image-55.png)
+
