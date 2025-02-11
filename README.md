@@ -6,7 +6,7 @@
 4. [Joining data in SQL](Courses/DE%20Asociate/4-Joining%20data%20in%20SQL/Joining%20data%20in%20SQL.md)
 5. [Introduction to Relational Databases in SQL](Courses/DE%20Asociate/5-Intro%20to%20RD%20in%20SQL/Intro%20to%20Relational%20Databases%20in%20SQL.md)
 6. [Database Design](Courses/DE%20Asociate/6-DB%20design/Database%20Design.md)
-7. [Data Warehousing Concepts](Courses/DE%20Asociate/6-DB%20design/data-warehousing-concepts.md)
+7. [Data Warehousing Concepts](Courses/DE%20Asociate/7-Data%20Warehousing/data-warehousing-concepts.md)
 
 ### Exercises
 1. [Extending dimensions](Courses/DE%20Asociate/Exercises/extending-dimensions.md) <br>
