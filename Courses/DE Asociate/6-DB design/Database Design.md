@@ -231,3 +231,120 @@ This could be resolved if we put that information in another table.
 
 **The more normalized the database, the less prone it will be to these anomalies.** <br>
 **For example, most 3NF tables can't have an update, insertion, and deletion anomalies. This makes normalization sound great! BUT remember the downsides, longer/more complex/slower queries, more complex structure and more CPU and ram needed to run those queries!**
+
+
+## Database Views
+Essentially, **views are virtual** tables that are not part of the physical schema. A view isn't stored in physical memory; instead, the query to create the view is. <br>
+The data in a view comes from data in tables of the same database. Once a view is created, you can query it like a regular table. <br>
+The benefit of a view is that you don't need to retype common queries. It allows you to add virtual tables without altering the database's schema. <br>
+
+Here's an example. Let's say analysts at your company are often running analytics on the science fiction genre. To help their workflow, you want to create a view specifically dedicated to the science fiction genre and its associated book titles and authors. <br>
+
+![alt text](image-28.png)
+
+After executing the code from the last slide, you can query the view.
+Scifi_books isn't a real table with physical memory. When we run this select statement, the following query is actually being run.
+
+![alt text](image-29.png)
+
+To get all the views in your database, you can run a query on the INFORMATION_SCHEMA.views table. <br>
+To exclude system views and to get to views you've created, use this query. It excludes views from pg_catalog and information_schema which are built-in view categories. <br>
+
+![alt text](image-30.png)
+
+### Benefits of views:
+- A view **doesn't take up any storage** except for the query statement, which is minimal.
+- Views act as a form of **access control**. For example, instead of giving a user access to columns that may have sensitive information, you can restrict what they can see via a view.
+- Views **mask the complexity** of queries.
+- Views are **handy for views normalized past the 2NF**. You can make those common joins -such as aggregating dates or genres- into views.
+
+### Managing views
+To give and remove user permissions, we use the SQL GRANT and REVOKE command. The syntax is as follows:
+1. First, you list the relevant privileges after the GRANT and the REVOKE command. There are several types of privileges users can execute (SELECT, INSERT, UPDATE, DELETE, etc).
+2. Then you indicate on which object (table, view, schema, etc.) and for which role (db user or gorup of users). You use the TO clause and FROM clause, respectively, for grant and revoke.<br>
+
+Here's an example. The update privilege on an object called ratings is being granted to public.<br> 
+**PUBLIC** is a SQL term that encompasses **all users**. All users can now use the UPDATE command on the ratings object. <br>
+![alt text](image-31.png)
+
+In the second line, the user db_user will no longer be able to INSERT on the object films.<br>
+![alt text](image-32.png)
+<br>
+<br>
+
+### Updating a view
+A user can UPDATE a view if they have the necessary privilege. <br>
+If you remember correctly, a view isn't a physical table. Therefore, when you run an update, **you are updating the tables behind the view** (don't fucking do it Jimmy). <br>
+Only particular views are updatable. The criteria depend on the type of SQL being used. Generally:
+- The view needs to be made up of one table.
+- Can't rely on a window or aggregate function.
+<br> 
+<br>
+
+### Inserting into a view
+The INSERT command is in a similar case as the UPDATE command. When you run an insert command into a view, you're **again** really inserting into the table behind it. <br>
+The criteria for inserting is usually very similar to updatable views.
+
+`Generally, avoid modifying data through views. It's usually a good idea to use views for read-only purposes only.`
+
+### Droping a view
+Dropping a view is straightforward with the DROP command. There are two useful parameters to know about: CASCADE and RESTRICT:
+- The RESTRICT parameter is the default and returns an error when you try to drop a view that other objects depend on.<br> 
+- The CASCADE parameter will drop the view and any object that depends on that view.
+
+![alt text](image-33.png)
+
+### Redefining a view
+Say you want to change the query a view is defined by. To do this, you can use the CREATE OR REPLACE command:
+- If a view_name exists, it is replaced by the new_query specified.
+- The new query must generate the same column names, column order, and column data types as the existing query.
+- The column output may be different, as long as those conditions are met.
+- New columns may be added at the end. <br>
+
+![alt text](image-34.png) <br>
+`If this criteria can't be met, the solution is to drop the existing view and create a new one.`
+
+### Altering a view
+The ALTER VIEW statement allows you to change various properties of a view. <br>
+The statement will issue an error if you don't use the IF EXISTS and attempt to change a non-existing view. But when you use the IF EXISTS, the statement issues a notice instead. **The IF EXISTS is optional.**
+
+The auxiliary properties of a view can be altered. I list the various options here. This includes changing the name, owner, and schema of a view.
+
+![alt text](image-35.png)
+
+
+### Materialized views
+There are two types of views. When you come across the term "view" plainly, it is most likely referring to non-materialized views.<br>
+As the names begin to hint, materialized views are physically materialized, while non-materialized remain virtual.<br>
+- Materialized views **stores the query results**. These query results are **stored on disk**.
+- The query becomes precomputed via the view. When you query a materialized view, it accesses the stored query results on the disk, rather than running the query like a non-materialized view and creating a virtual table.
+- Are refreshed or rematerialized when prompted or scheduled.
+- Materialized views are great if you have queries with long execution time.
+- Allow data scientists and analysts to run long queries and get results very quickly.<br>
+- Materialized views are particularly useful in data warehouses where data is not so write intensive.<br>
+
+`The caveat is the data is only as up-to-date as the last time the view was refreshed. So, you shouldn't use materialized views on data that is being updated often, because then analyses will be run too often on out-of-date data.`
+
+Creating materialized views is very similar to creating non-materialized views, except that you specify "Materialized" in the SQL statement. <br>
+![alt text](image-36.png)
+
+You use the "REFRESH MATERIALIZED VIEW" syntax to refresh a view.<br>
+There isn't a PostgresSQl command to schedule refreshing views. However, there are several ways to do so, like using cron jobs.<br>
+![alt text](image-38.png)
+
+### Materialized views dependencies
+Unlike non-materialized views, you need to manage when you refresh materialized views when you have dependencies.
+
+![alt text](image-39.png)
+
+For example, let's say you have two materialized views: X and Y. Y uses X in its query; meaning Y depends on X. X doesn't depend on Y as it doesn't use Y in its query. Let' s say X has a more time-consuming query. If Y is refreshed before X's refresh is completed, then Y now has out-of-date data.
+
+This creates a dependency chain when refreshing views.<br> **Scheduling when to refresh is not trivial**. <br>
+Refreshing them all at the same time is not the most efficient when you consider query time and dependencies.
+
+Companies that have many materialized views, use directed acyclic graphs (**DAG** finite directed graph with no cycles) to track dependencies and pipeline scheduler tools, like Airflow and Luigi, to schedule and run REFRESH statements.
+
+![alt text](image-40.png)
+`Here, you can see an example where the directed arrows reflect a dependency in a certain direction where one node depends on another. The no cycles part is important because two views can't depend on each other - only one can rely on another.`
+
+## Database Roles and Access Control

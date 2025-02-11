@@ -2,5 +2,5 @@
 ![task](image-3.png)
 ![task2](image-4.png)
 
-**Solution:**
+**Solution:**<br>
 ![solution](image-5.png)
