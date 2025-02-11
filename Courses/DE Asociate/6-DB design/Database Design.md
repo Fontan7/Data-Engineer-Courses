@@ -459,4 +459,3 @@ Rather than grouping columns together into tables, columnar databases store each
 Here, the data is interconnected and best represented as a graph. This method is capable of lots of complexity. Graph databases are used by most social networks and pretty much any website that recommends anything based on your behavior. An example of a graph DBMS is Neo4j.<br>
 
 ![alt text](image-55.png)
-
