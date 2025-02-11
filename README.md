@@ -12,6 +12,8 @@
 2. [Foreign keys star model](Courses/DE%20Asociate/Exercises/foreign-keys-star-model.md) <br>
 3. [Quering Snowflake shcema](Courses/DE%20Asociate/Exercises/querying-snowflake-schema.md) <br>
 4. [Quering Star schema](Courses/DE%20Asociate/Exercises/querying-star-schema.md) <br>
+5. [Redefining a View](Courses/DE%20Asociate/Exercises/redifining-a-view.md) <br>
+6. [Creating & Refreshing a Materialized View](Courses/DE%20Asociate/Exercises/creating-and-refreshing-materialized-view.md) <br>
 
 ### Bonus Projects
 1. [Analyzing students mental health](Courses/DE%20Asociate/Projects/analyzing-students-mental-health/exercise.md)
