@@ -344,7 +344,7 @@ Refreshing them all at the same time is not the most efficient when you consider
 
 Companies that have many materialized views, use directed acyclic graphs (**DAG** finite directed graph with no cycles) to track dependencies and pipeline scheduler tools, like Airflow and Luigi, to schedule and run REFRESH statements.
 
-![alt text](image-40.png)
+![alt text](image-40.png)<br>
 `Here, you can see an example where the directed arrows reflect a dependency in a certain direction where one node depends on another. The no cycles part is important because two views can't depend on each other - only one can rely on another.`
 
 ## Database Roles and Access Control
