@@ -84,7 +84,7 @@ We chose a FULL JOIN because we were interested in all countries, whether they h
 ![](20250120003825.png)
 ![](20250120003844.png)
 
-### CROSS JOIN
+## CROSS JOIN
 CROSS JOINs are slightly different than joins we have seen previously: they create all possible combinations of two tables.
 In this diagram we have two tables named table1 and table2, with one field each: id1 and id2, respectively. The result of the CROSS JOIN is all nine combinations of the id values of 1, 2, and 3 in table1 with the id values of A, B, and C for table2.
 
@@ -97,7 +97,7 @@ We use a WHERE clause to focus only on prime ministers from Asia and presidents 
 
 ![](20250120005414.png)
 
-### SELF JOIN
+## SELF JOIN
 Joining a table to itself may seem like an unusual thing to do. Why would we want to do that? Self joins are used to compare values from part of a table to other values from within the same table.
 
 We can't just write SELF JOIN in SQL code, for example. In addition, aliasing is required for a self join.
@@ -158,7 +158,6 @@ Let's say we were interested in monarchs that do NOT also hold the title of prim
 
 
 ## Subqueries
-
 ### Inside WHERE
 This is called a subquery! It chooses records in the first table where the country matches the list returned by our subquery. Since Spain does not have a president, only the Portuguese president is listed.
 
