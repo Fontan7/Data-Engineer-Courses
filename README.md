@@ -7,8 +7,15 @@
 3. [Intermediate SQL](Courses/DE%20Asociate/3-Intermediate%20SQL/Intermediate%20SQL.md)
 
 4. [Joining data in SQL](Courses/DE%20Asociate/4-Joining%20data%20in%20SQL/Joining%20data%20in%20SQL.md)
+    - [Defining Relationships](Courses/DE%20Asociate/4-Joining%20data%20in%20SQL/Joining%20data%20in%20SQL.md#defining-relationships)
+    - [Inner Join](Courses/DE%20Asociate/4-Joining%20data%20in%20SQL/Joining%20data%20in%20SQL.md#inner-join)
+    - [Multiple Joins](Courses/DE%20Asociate/4-Joining%20data%20in%20SQL/Joining%20data%20in%20SQL.md#multiple-joins)
+    - [Left and Right Joins](Courses/DE%20Asociate/4-Joining%20data%20in%20SQL/Joining%20data%20in%20SQL.md#left-and-right-joins)
 
 5. [Introduction to Relational Databases in SQL](Courses/DE%20Asociate/5-Intro%20to%20RD%20in%20SQL/Intro%20to%20Relational%20Databases%20in%20SQL.md)
+    - [Create Table](Courses/DE%20Asociate/5-Intro%20to%20RD%20in%20SQL/Intro%20to%20Relational%20Databases%20in%20SQL.md#create-table)
+    - [Migrate Data Between Tables](Courses/DE%20Asociate/5-Intro%20to%20RD%20in%20SQL/Intro%20to%20Relational%20Databases%20in%20SQL.md#migrate-data-between-tables)
+    - [Database Constraints](Courses/DE%20Asociate/5-Intro%20to%20RD%20in%20SQL/Intro%20to%20Relational%20Databases%20in%20SQL.md#database-constraints)
 
 6. [Database Design](Courses/DE%20Asociate/6-DB%20design/Database%20Design.md)
     - [OLTP and OLAP](Courses/DE%20Asociate/6-DB%20design/Database%20Design.md#oltp-and-olap)
