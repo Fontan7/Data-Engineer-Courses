@@ -5,6 +5,15 @@
 2. [Introduction to SQL](Courses/DE%20Asociate/2-Introduction%20to%20SQL/Intro%20to%20SQL.md)
 
 3. [Intermediate SQL](Courses/DE%20Asociate/3-Intermediate%20SQL/Intermediate%20SQL.md)
+    - [Order of Execution](Courses/DE%20Asociate/3-Intermediate%20SQL/Intermediate%20SQL.md#order-of-execution)
+    - [Formatting](Courses/DE%20Asociate/3-Intermediate%20SQL/Intermediate%20SQL.md#formatting)
+    - [Order of Execution](Courses/DE%20Asociate/3-Intermediate%20SQL/Intermediate%20SQL.md#order-of-execution)
+    - [Filtering / WHERE](Courses/DE%20Asociate/3-Intermediate%20SQL/Intermediate%20SQL.md#filtering-/-where)
+    - [Count](Courses/DE%20Asociate/3-Intermediate%20SQL/Intermediate%20SQL.md#count)
+    - [Summarizing Data](Courses/DE%20Asociate/3-Intermediate%20SQL/Intermediate%20SQL.md#summarizing-data)
+    - [Arithmetic](Courses/DE%20Asociate/3-Intermediate%20SQL/Intermediate%20SQL.md#arithmetic)
+    - [NULL](Courses/DE%20Asociate/3-Intermediate%20SQL/Intermediate%20SQL.md#null)
+    - [Sorting](Courses/DE%20Asociate/3-Intermediate%20SQL/Intermediate%20SQL.md#sorting)
 
 4. [Joining data in SQL](Courses/DE%20Asociate/4-Joining%20data%20in%20SQL/Joining%20data%20in%20SQL.md)
     - [Defining Relationships](Courses/DE%20Asociate/4-Joining%20data%20in%20SQL/Joining%20data%20in%20SQL.md#defining-relationships)
