@@ -1,10 +1,15 @@
 # Associate Data Engineer in SQL
 ### Summaries
 1. [Introduction to Data engineering](Courses/DE%20Asociate/1-Understanding%20DE/Understanding%20Data%20Engineering.md)
+
 2. [Introduction to SQL](Courses/DE%20Asociate/2-Introduction%20to%20SQL/Intro%20to%20SQL.md)
+
 3. [Intermediate SQL](Courses/DE%20Asociate/3-Intermediate%20SQL/Intermediate%20SQL.md)
+
 4. [Joining data in SQL](Courses/DE%20Asociate/4-Joining%20data%20in%20SQL/Joining%20data%20in%20SQL.md)
+
 5. [Introduction to Relational Databases in SQL](Courses/DE%20Asociate/5-Intro%20to%20RD%20in%20SQL/Intro%20to%20Relational%20Databases%20in%20SQL.md)
+
 6. [Database Design](Courses/DE%20Asociate/6-DB%20design/Database%20Design.md)
     - [OLTP and OLAP](Courses/DE%20Asociate/6-DB%20design/Database%20Design.md#oltp-and-olap)
     - [Storing Data](Courses/DE%20Asociate/6-DB%20design/Database%20Design.md#storing-data)
@@ -14,6 +19,7 @@
     - [Database Roles and Access Control](Courses/DE%20Asociate/6-DB%20design/Database%20Design.md#database-roles-and-access-control)
     - [Table Partitioning](Courses/DE%20Asociate/6-DB%20design/Database%20Design.md#table-partitioning)
     - [Picking a Database Management System](Courses/DE%20Asociate/6-DB%20design/Database%20Design.md#picking-a-database-management-system)
+
 7. [Data Warehousing Concepts](Courses/DE%20Asociate/7-Data%20Warehousing/data-warehousing-concepts.md)
     - [Data Warehouses vs. Data Lakes](Courses/DE%20Asociate/7-Data%20Warehousing/data-warehousing-concepts.md#data-warehouses-vs-data-lakes)
     - [The Warehouse Lifecycle](Courses/DE%20Asociate/7-Data%20Warehousing/data-warehousing-concepts.md#the-warehouse-lifecycle)
