@@ -204,7 +204,7 @@ It contrasts the top-down approach because the data moves to the **data marts fi
 
 `The bottom-up approach has a lower upfront cost but requires more upkeep than the top-down approach.`
 
-## OLAP & OLTP systems (again)
+## OLAP and OLTP systems
 ### OLAP
 OLAP stands for Online Analytical Processing. It is a tool for performing multidimensional analysis at high speeds on large volumes of data from a data warehouse, data mart, or some other centralized data store.<br>
 

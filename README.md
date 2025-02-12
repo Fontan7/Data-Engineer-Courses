@@ -6,7 +6,22 @@
 4. [Joining data in SQL](Courses/DE%20Asociate/4-Joining%20data%20in%20SQL/Joining%20data%20in%20SQL.md)
 5. [Introduction to Relational Databases in SQL](Courses/DE%20Asociate/5-Intro%20to%20RD%20in%20SQL/Intro%20to%20Relational%20Databases%20in%20SQL.md)
 6. [Database Design](Courses/DE%20Asociate/6-DB%20design/Database%20Design.md)
+    - [OLTP and OLAP](Courses/DE%20Asociate/6-DB%20design/Database%20Design.md#oltp-and-olap)
+    - [Storing Data](Courses/DE%20Asociate/6-DB%20design/Database%20Design.md#storing-data)
+    - [What is DB Design?](Courses/DE%20Asociate/6-DB%20design/Database%20Design.md#what-is-db-design)
+    - [Database Schemas and Normalization](Courses/DE%20Asociate/6-DB%20design/Database%20Design.md#database-schemas-and-normalization)
+    - [Database Views](Courses/DE%20Asociate/6-DB%20design/Database%20Design.md#database-views)
+    - [Database Roles and Access Control](Courses/DE%20Asociate/6-DB%20design/Database%20Design.md#database-roles-and-access-control)
+    - [Table Partitioning](Courses/DE%20Asociate/6-DB%20design/Database%20Design.md#table-partitioning)
+    - [Picking a Database Management System](Courses/DE%20Asociate/6-DB%20design/Database%20Design.md#picking-a-database-management-system)
 7. [Data Warehousing Concepts](Courses/DE%20Asociate/7-Data%20Warehousing/data-warehousing-concepts.md)
+    - [Data Warehouses vs. Data Lakes](Courses/DE%20Asociate/7-Data%20Warehousing/data-warehousing-concepts.md#data-warehouses-vs-data-lakes)
+    - [The Warehouse Lifecycle](Courses/DE%20Asociate/7-Data%20Warehousing/data-warehousing-concepts.md#the-warehouse-lifecycle)
+    - [Layers of a Data Warehouse](Courses/DE%20Asociate/7-Data%20Warehousing/data-warehousing-concepts.md#layers-of-a-data-warehouse)
+    - [Presentation Layer Groups](Courses/DE%20Asociate/7-Data%20Warehousing/data-warehousing-concepts.md#presentation-layer-groups)
+    - [Data Warehouse Architectures](Courses/DE%20Asociate/7-Data%20Warehousing/data-warehousing-concepts.md#data-warehouse-architectures)
+    - [OLAP & OLTP systems (again)](Courses/DE%20Asociate/7-Data%20Warehousing/data-warehousing-concepts.md#olap-and-oltp-systems)
+    - [Data Warehouse Data Modeling](Courses/DE%20Asociate/7-Data%20Warehousing/data-warehousing-concepts.md#data-warehouse-data-modeling)
 
 ### Exercises
 1. [Extending dimensions](Courses/DE%20Asociate/Exercises/extending-dimensions.md) <br>
