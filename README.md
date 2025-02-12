@@ -1,53 +1,74 @@
 # Associate Data Engineer in SQL
 ### Summaries
-1. [Introduction to Data engineering](Courses/DE%20Asociate/1-Understanding%20DE/Understanding%20Data%20Engineering.md)
+<details>
+    <summary><a href="Courses/DE%20Asociate/1-Understanding%20DE/Understanding%20Data%20Engineering.md"> 1 Introduction to Data engineering </a></summary>
 
-2. [Introduction to SQL](Courses/DE%20Asociate/2-Introduction%20to%20SQL/Intro%20to%20SQL.md)
+</details>
 
-3. [Intermediate SQL](Courses/DE%20Asociate/3-Intermediate%20SQL/Intermediate%20SQL.md)
-    - [Order of Execution](Courses/DE%20Asociate/3-Intermediate%20SQL/Intermediate%20SQL.md#order-of-execution)
-    - [Formatting](Courses/DE%20Asociate/3-Intermediate%20SQL/Intermediate%20SQL.md#formatting)
-    - [Order of Execution](Courses/DE%20Asociate/3-Intermediate%20SQL/Intermediate%20SQL.md#order-of-execution)
-    - [Filtering / WHERE](Courses/DE%20Asociate/3-Intermediate%20SQL/Intermediate%20SQL.md#filtering-/-where)
-    - [Count](Courses/DE%20Asociate/3-Intermediate%20SQL/Intermediate%20SQL.md#count)
-    - [Summarizing Data](Courses/DE%20Asociate/3-Intermediate%20SQL/Intermediate%20SQL.md#summarizing-data)
-    - [Arithmetic](Courses/DE%20Asociate/3-Intermediate%20SQL/Intermediate%20SQL.md#arithmetic)
-    - [NULL](Courses/DE%20Asociate/3-Intermediate%20SQL/Intermediate%20SQL.md#null)
-    - [Sorting](Courses/DE%20Asociate/3-Intermediate%20SQL/Intermediate%20SQL.md#sorting)
+<details>
+    <summary><a href="Courses/DE%20Asociate/2-Introduction%20to%20SQL/Intro%20to%20SQL.md"> 2 Introduction to SQL </a></summary>
 
-4. [Joining data in SQL](Courses/DE%20Asociate/4-Joining%20data%20in%20SQL/Joining%20data%20in%20SQL.md)
-    - [Defining Relationships](Courses/DE%20Asociate/4-Joining%20data%20in%20SQL/Joining%20data%20in%20SQL.md#defining-relationships)
-    - [Inner Join](Courses/DE%20Asociate/4-Joining%20data%20in%20SQL/Joining%20data%20in%20SQL.md#inner-join)
-    - [Multiple Joins](Courses/DE%20Asociate/4-Joining%20data%20in%20SQL/Joining%20data%20in%20SQL.md#multiple-joins)
-    - [Left and Right Joins](Courses/DE%20Asociate/4-Joining%20data%20in%20SQL/Joining%20data%20in%20SQL.md#left-and-right-joins)
-    - [Cross Join](Courses/DE%20Asociate/4-Joining%20data%20in%20SQL/Joining%20data%20in%20SQL.md#cross-join)
-    - [Self Join](Courses/DE%20Asociate/4-Joining%20data%20in%20SQL/Joining%20data%20in%20SQL.md#self-join)
-    - [Set theory for SQL joins](Courses/DE%20Asociate/4-Joining%20data%20in%20SQL/Joining%20data%20in%20SQL.md#set-theory-for-sql-joins)
-    - [Subqueries](Courses/DE%20Asociate/4-Joining%20data%20in%20SQL/Joining%20data%20in%20SQL.md#subqueries)
+</details>
 
-5. [Introduction to Relational Databases in SQL](Courses/DE%20Asociate/5-Intro%20to%20RD%20in%20SQL/Intro%20to%20Relational%20Databases%20in%20SQL.md)
-    - [Create Table](Courses/DE%20Asociate/5-Intro%20to%20RD%20in%20SQL/Intro%20to%20Relational%20Databases%20in%20SQL.md#create-table)
-    - [Migrate Data Between Tables](Courses/DE%20Asociate/5-Intro%20to%20RD%20in%20SQL/Intro%20to%20Relational%20Databases%20in%20SQL.md#migrate-data-between-tables)
-    - [Database Constraints](Courses/DE%20Asociate/5-Intro%20to%20RD%20in%20SQL/Intro%20to%20Relational%20Databases%20in%20SQL.md#database-constraints)
+<details>
+    <summary><a href="Courses/DE%20Asociate/3-Intermediate%20SQL/Intermediate%20SQL.md"> 3 Intermediate SQL </a></summary>
 
-6. [Database Design](Courses/DE%20Asociate/6-DB%20design/Database%20Design.md)
-    - [OLTP and OLAP](Courses/DE%20Asociate/6-DB%20design/Database%20Design.md#oltp-and-olap)
-    - [Storing Data](Courses/DE%20Asociate/6-DB%20design/Database%20Design.md#storing-data)
-    - [What is DB Design?](Courses/DE%20Asociate/6-DB%20design/Database%20Design.md#what-is-db-design)
-    - [Database Schemas and Normalization](Courses/DE%20Asociate/6-DB%20design/Database%20Design.md#database-schemas-and-normalization)
-    - [Database Views](Courses/DE%20Asociate/6-DB%20design/Database%20Design.md#database-views)
-    - [Database Roles and Access Control](Courses/DE%20Asociate/6-DB%20design/Database%20Design.md#database-roles-and-access-control)
-    - [Table Partitioning](Courses/DE%20Asociate/6-DB%20design/Database%20Design.md#table-partitioning)
-    - [Picking a Database Management System](Courses/DE%20Asociate/6-DB%20design/Database%20Design.md#picking-a-database-management-system)
+- [Order of Execution](Courses/DE%20Asociate/3-Intermediate%20SQL/Intermediate%20SQL.md#order-of-execution)
+- [Formatting](Courses/DE%20Asociate/3-Intermediate%20SQL/Intermediate%20SQL.md#formatting)
+- [Order of Execution](Courses/DE%20Asociate/3-Intermediate%20SQL/Intermediate%20SQL.md#order-of-execution)
+- [Filtering / WHERE](Courses/DE%20Asociate/3-Intermediate%20SQL/Intermediate%20SQL.md#filtering-/-where)
+- [Count](Courses/DE%20Asociate/3-Intermediate%20SQL/Intermediate%20SQL.md#count)
+- [Summarizing Data](Courses/DE%20Asociate/3-Intermediate%20SQL/Intermediate%20SQL.md#summarizing-data)
+- [Arithmetic](Courses/DE%20Asociate/3-Intermediate%20SQL/Intermediate%20SQL.md#arithmetic)
+- [NULL](Courses/DE%20Asociate/3-Intermediate%20SQL/Intermediate%20SQL.md#null)
+- [Sorting](Courses/DE%20Asociate/3-Intermediate%20SQL/Intermediate%20SQL.md#sorting)
+</details>
 
-7. [Data Warehousing Concepts](Courses/DE%20Asociate/7-Data%20Warehousing/data-warehousing-concepts.md)
-    - [Data Warehouses vs. Data Lakes](Courses/DE%20Asociate/7-Data%20Warehousing/data-warehousing-concepts.md#data-warehouses-vs-data-lakes)
-    - [The Warehouse Lifecycle](Courses/DE%20Asociate/7-Data%20Warehousing/data-warehousing-concepts.md#the-warehouse-lifecycle)
-    - [Layers of a Data Warehouse](Courses/DE%20Asociate/7-Data%20Warehousing/data-warehousing-concepts.md#layers-of-a-data-warehouse)
-    - [Presentation Layer Groups](Courses/DE%20Asociate/7-Data%20Warehousing/data-warehousing-concepts.md#presentation-layer-groups)
-    - [Data Warehouse Architectures](Courses/DE%20Asociate/7-Data%20Warehousing/data-warehousing-concepts.md#data-warehouse-architectures)
-    - [OLAP & OLTP systems (again)](Courses/DE%20Asociate/7-Data%20Warehousing/data-warehousing-concepts.md#olap-and-oltp-systems)
-    - [Data Warehouse Data Modeling](Courses/DE%20Asociate/7-Data%20Warehousing/data-warehousing-concepts.md#data-warehouse-data-modeling)
+<details>
+    <summary><a href="Courses/DE%20Asociate/4-Joining%20data%20in%20SQL/Joining%20data%20in%20SQL.md"> 4 Joining data in SQL </a></summary>
+
+- [Defining Relationships](Courses/DE%20Asociate/4-Joining%20data%20in%20SQL/Joining%20data%20in%20SQL.md#defining-relationships)
+- [Inner Join](Courses/DE%20Asociate/4-Joining%20data%20in%20SQL/Joining%20data%20in%20SQL.md#inner-join)
+- [Multiple Joins](Courses/DE%20Asociate/4-Joining%20data%20in%20SQL/Joining%20data%20in%20SQL.md#multiple-joins)
+- [Left and Right Joins](Courses/DE%20Asociate/4-Joining%20data%20in%20SQL/Joining%20data%20in%20SQL.md#left-and-right-joins)
+- [Cross Join](Courses/DE%20Asociate/4-Joining%20data%20in%20SQL/Joining%20data%20in%20SQL.md#cross-join)
+- [Self Join](Courses/DE%20Asociate/4-Joining%20data%20in%20SQL/Joining%20data%20in%20SQL.md#self-join)
+- [Set theory for SQL joins](Courses/DE%20Asociate/4-Joining%20data%20in%20SQL/Joining%20data%20in%20SQL.md#set-theory-for-sql-joins)
+- [Subqueries](Courses/DE%20Asociate/4-Joining%20data%20in%20SQL/Joining%20data%20in%20SQL.md#subqueries)
+</details>
+
+<details>
+    <summary><a href="Courses/DE%20Asociate/5-Intro%20to%20RD%20in%20SQL/Intro%20to%20Relational%20Databases%20in%20SQL.md"> 5 Introduction to Relational Databases in SQL </a></summary>
+
+- [Create Table](Courses/DE%20Asociate/5-Intro%20to%20RD%20in%20SQL/Intro%20to%20Relational%20Databases%20in%20SQL.md#create-table)
+- [Migrate Data Between Tables](Courses/DE%20Asociate/5-Intro%20to%20RD%20in%20SQL/Intro%20to%20Relational%20Databases%20in%20SQL.md#migrate-data-between-tables)
+- [Database Constraints](Courses/DE%20Asociate/5-Intro%20to%20RD%20in%20SQL/Intro%20to%20Relational%20Databases%20in%20SQL.md#database-constraints)
+</details>
+
+<details>
+    <summary><a href="Courses/DE%20Asociate/6-DB%20design/Database%20Design.md"> 6 Database Design </a></summary>
+
+- [OLTP and OLAP](Courses/DE%20Asociate/6-DB%20design/Database%20Design.md#oltp-and-olap)
+- [Storing Data](Courses/DE%20Asociate/6-DB%20design/Database%20Design.md#storing-data)
+- [What is DB Design?](Courses/DE%20Asociate/6-DB%20design/Database%20Design.md#what-is-db-design)
+- [Database Schemas and Normalization](Courses/DE%20Asociate/6-DB%20design/Database%20Design.md#database-schemas-and-normalization)
+- [Database Views](Courses/DE%20Asociate/6-DB%20design/Database%20Design.md#database-views)
+- [Database Roles and Access Control](Courses/DE%20Asociate/6-DB%20design/Database%20Design.md#database-roles-and-access-control)
+- [Table Partitioning](Courses/DE%20Asociate/6-DB%20design/Database%20Design.md#table-partitioning)
+- [Picking a Database Management System](Courses/DE%20Asociate/6-DB%20design/Database%20Design.md#picking-a-database-management-system)
+</details>
+
+<details>
+    <summary><a href="Courses/DE%20Asociate/7-Data%20Warehousing/data-warehousing-concepts.md"> 7 Data Warehousing Concepts </a></summary>
+
+- [Data Warehouses vs. Data Lakes](Courses/DE%20Asociate/7-Data%20Warehousing/data-warehousing-concepts.md#data-warehouses-vs-data-lakes)
+- [The Warehouse Lifecycle](Courses/DE%20Asociate/7-Data%20Warehousing/data-warehousing-concepts.md#the-warehouse-lifecycle)
+- [Layers of a Data Warehouse](Courses/DE%20Asociate/7-Data%20Warehousing/data-warehousing-concepts.md#layers-of-a-data-warehouse)
+- [Presentation Layer Groups](Courses/DE%20Asociate/7-Data%20Warehousing/data-warehousing-concepts.md#presentation-layer-groups)
+- [Data Warehouse Architectures](Courses/DE%20Asociate/7-Data%20Warehousing/data-warehousing-concepts.md#data-warehouse-architectures)
+- [OLAP & OLTP systems (again)](Courses/DE%20Asociate/7-Data%20Warehousing/data-warehousing-concepts.md#olap-and-oltp-systems)
+- [Data Warehouse Data Modeling](Courses/DE%20Asociate/7-Data%20Warehousing/data-warehousing-concepts.md#data-warehouse-data-modeling)
+</details>
 
 ### Exercises
 1. [Extending dimensions](Courses/DE%20Asociate/Exercises/extending-dimensions.md) <br>
