@@ -3,11 +3,22 @@
 <details>
     <summary><a href="Courses/DE%20Asociate/1-Understanding%20DE/Understanding%20Data%20Engineering.md"> 1 Introduction to Data engineering </a></summary>
 
+- [Data Structures](Courses/DE%20Asociate/1-Understanding%20DE/Understanding%20Data%20Engineering.md#data-structures)
+- [SQL Databases](Courses/DE%20Asociate/1-Understanding%20DE/Understanding%20Data%20Engineering.md#sql-databases)
+- [Data Lakes and Data Warehouses](Courses/DE%20Asociate/1-Understanding%20DE/Understanding%20Data%20Engineering.md#data-lakes-and-data-warehouses)
+- [Processing Data](Courses/DE%20Asociate/1-Understanding%20DE/Understanding%20Data%20Engineering.md#processing-data)
+- [Scheduling Data](Courses/DE%20Asociate/1-Understanding%20DE/Understanding%20Data%20Engineering.md#scheduling-data)
+- [Parallel Computing](Courses/DE%20Asociate/1-Understanding%20DE/Understanding%20Data%20Engineering.md#parallel-computing)
+- [Cloud Computing](Courses/DE%20Asociate/1-Understanding%20DE/Understanding%20Data%20Engineering.md#cloud-computing)
 </details>
 
 <details>
     <summary><a href="Courses/DE%20Asociate/2-Introduction%20to%20SQL/Intro%20to%20SQL.md"> 2 Introduction to SQL </a></summary>
 
+- [Databases](Courses/DE%20Asociate/2-Introduction%20to%20SQL/Intro%20to%20SQL.md#databases)
+- [Tables](Courses/DE%20Asociate/2-Introduction%20to%20SQL/Intro%20to%20SQL.md#tables)
+- [Data](Courses/DE%20Asociate/2-Introduction%20to%20SQL/Intro%20to%20SQL.md#data)
+- [Introducing Queries](Courses/DE%20Asociate/2-Introduction%20to%20SQL/Intro%20to%20SQL.md#introducing-queries)
 </details>
 
 <details>
