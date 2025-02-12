@@ -11,6 +11,10 @@
     - [Inner Join](Courses/DE%20Asociate/4-Joining%20data%20in%20SQL/Joining%20data%20in%20SQL.md#inner-join)
     - [Multiple Joins](Courses/DE%20Asociate/4-Joining%20data%20in%20SQL/Joining%20data%20in%20SQL.md#multiple-joins)
     - [Left and Right Joins](Courses/DE%20Asociate/4-Joining%20data%20in%20SQL/Joining%20data%20in%20SQL.md#left-and-right-joins)
+    - [Cross Join](Courses/DE%20Asociate/4-Joining%20data%20in%20SQL/Joining%20data%20in%20SQL.md#cross-join)
+    - [Self Join](Courses/DE%20Asociate/4-Joining%20data%20in%20SQL/Joining%20data%20in%20SQL.md#self-join)
+    - [Set theory for SQL joins](Courses/DE%20Asociate/4-Joining%20data%20in%20SQL/Joining%20data%20in%20SQL.md#set-theory-for-sql-joins)
+    - [Subqueries](Courses/DE%20Asociate/4-Joining%20data%20in%20SQL/Joining%20data%20in%20SQL.md#subqueries)
 
 5. [Introduction to Relational Databases in SQL](Courses/DE%20Asociate/5-Intro%20to%20RD%20in%20SQL/Intro%20to%20Relational%20Databases%20in%20SQL.md)
     - [Create Table](Courses/DE%20Asociate/5-Intro%20to%20RD%20in%20SQL/Intro%20to%20Relational%20Databases%20in%20SQL.md#create-table)
@@ -39,12 +43,13 @@
 ### Exercises
 1. [Extending dimensions](Courses/DE%20Asociate/Exercises/extending-dimensions.md) <br>
 2. [Foreign keys star model](Courses/DE%20Asociate/Exercises/foreign-keys-star-model.md) <br>
-3. [Quering Snowflake shcema](Courses/DE%20Asociate/Exercises/querying-snowflake-schema.md) <br>
-4. [Quering Star schema](Courses/DE%20Asociate/Exercises/querying-star-schema.md) <br>
-5. [Redefining a View](Courses/DE%20Asociate/Exercises/redefining-a-view.md) <br>
-6. [Creating & Refreshing a Materialized View](Courses/DE%20Asociate/Exercises/creating-and-refreshing-materialized-view.md) <br>
-7. [Creating vertical partitions](Courses/DE%20Asociate/Exercises/creating-vertical-partitions.md) <br>
-8. [Creating horizontal partitions](Courses/DE%20Asociate/Exercises/creating-horizontal-partitions.md) <br>
+3. [Querying Snowflake shcema](Courses/DE%20Asociate/Exercises/querying-snowflake-schema.md) <br>
+4. [Querying Star schema](Courses/DE%20Asociate/Exercises/querying-star-schema.md) <br>
+5. [Subquerying](Courses/DE%20Asociate/Exercises/subquerying.md) <br>
+6. [Redefining a View](Courses/DE%20Asociate/Exercises/redefining-a-view.md) <br>
+7. [Creating & Refreshing a Materialized View](Courses/DE%20Asociate/Exercises/creating-and-refreshing-materialized-view.md) <br>
+8. [Creating vertical partitions](Courses/DE%20Asociate/Exercises/creating-vertical-partitions.md) <br>
+9. [Creating horizontal partitions](Courses/DE%20Asociate/Exercises/creating-horizontal-partitions.md) <br>
 
 ### Bonus Projects
 1. [Analyzing students mental health](Courses/DE%20Asociate/Projects/analyzing-students-mental-health/exercise.md)

@@ -235,8 +235,3 @@ Lastly, we ORDER BY continent.
 There we have it: the continents with monarchs in our database, and the most recent year of independence in those continents.
 
 ![](20250120233758.png)
-
-## Final challenge result!
-
-![alt text](image.png)
-![alt text](image-1.png)
