@@ -115,7 +115,7 @@
 10. [Casting in Snowflake](Courses\DE%20Asociate\Exercises\data-type-conversion-snowflake.md)<br>
 11. [Snowflake Natural Join](Courses\DE%20Asociate\Exercises\snowflake-natural-join.md)<br>
 12. [CTEs](Courses\DE%20Asociate\Exercises\cte.md)<br>
-13. [CTEs](Courses\DE%20Asociate\Exercises\early-filtering.md)<br>
+13. [Early Filtering](Courses\DE%20Asociate\Exercises\early-filtering.md)<br>
 
 ### Bonus Projects
 1. [Analyzing students mental health](Courses/DE%20Asociate/Projects/analyzing-students-mental-health/exercise.md)
