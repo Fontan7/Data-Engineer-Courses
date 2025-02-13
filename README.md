@@ -95,6 +95,11 @@
 - [What is Snowflake?](Courses/DE%20Asociate/8-Introduction%20to%20Snowflake/intro-to-snowflake.md#what-is-snowflake)
 - [Snowflake Architecture](Courses/DE%20Asociate/8-Introduction%20to%20Snowflake/intro-to-snowflake.md#snowflake-architecture)
 - [Snowflake Competitors](Courses/DE%20Asociate/8-Introduction%20to%20Snowflake/intro-to-snowflake.md#snowflake-competitors)
+- [Connectiong to Snowflake and DDL commands](Courses/DE%20Asociate/8-Introduction%20to%20Snowflake/intro-to-snowflake.md#connecting-to-snowflake-and-ddl-commands)
+- [Database Structures and DML](Courses/DE%20Asociate/8-Introduction%20to%20Snowflake/intro-to-snowflake.md#database-structures-and-dml)
+- [Data Type and Conversion](Courses/DE%20Asociate/8-Introduction%20to%20Snowflake/intro-to-snowflake.md#data-type-and-conversion)
+- [Joining in Snowflake](Courses/DE%20Asociate/8-Introduction%20to%20Snowflake/intro-to-snowflake.md#joining-in-snowflake)
+- [Handling Semi-structured Data](Courses/DE%20Asociate/8-Introduction%20to%20Snowflake/intro-to-snowflake.md#handling-semi-structured-data)
 </details>
 
 ### Exercises

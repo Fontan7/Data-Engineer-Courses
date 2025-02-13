@@ -69,7 +69,7 @@ What makes Snowflake unique is its decoupled compute and storage architecture, m
 - Snowflake's additional unique aspect is its multi-cloud support. And it's simple pay-as-you-go pricing.
 - Additionally, it offers a user-friendly interface with a low learning curve, making it easy to use. This also makes it a good option for organizations new to data warehouses.
 
-## Connectiong to Snowflake and DDL commands
+## Connecting to Snowflake and DDL commands
 ### Web interface
 One of the most user-friendly options is the Snowflake Web Interface, often called **Snowsight**.<br>
 It is the simplest way to get started. Simply sign up, create an account, and navigate through databases, schemas, tables and views displayed on the left panel.<br>
