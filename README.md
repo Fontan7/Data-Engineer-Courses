@@ -113,9 +113,9 @@
 8. [Creating vertical partitions](Courses/DE%20Asociate/Exercises/creating-vertical-partitions.md) <br>
 9. [Creating horizontal partitions](Courses/DE%20Asociate/Exercises/creating-horizontal-partitions.md) <br>
 10. [Casting in Snowflake](Courses\DE%20Asociate\Exercises\data-type-conversion-snowflake.md)<br>
-11. [Snowflake Natural Join](Courses\DE%20Asociate\Exercises\snowflake-natural-join.md)<br>
-12. [CTEs](Courses\DE%20Asociate\Exercises\cte.md)<br>
-13. [Early Filtering](Courses\DE%20Asociate\Exercises\early-filtering.md)<br>
+1. [Snowflake Natural Join](Courses\DE%20Asociate\Exercises\snowflake-natural-join.md)<br>
+1. [CTEs](Courses\DE%20Asociate\Exercises\cte.md)<br>
+1. [Early Filtering](Courses\DE%20Asociate\Exercises\early-filtering.md)<br>
 
 ### Bonus Projects
 1. [Analyzing students mental health](Courses/DE%20Asociate/Projects/analyzing-students-mental-health/exercise.md)
