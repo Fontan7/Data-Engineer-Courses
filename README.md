@@ -79,6 +79,12 @@
 - [Data Warehouse Architectures](Courses/DE%20Asociate/7-Data%20Warehousing/data-warehousing-concepts.md#data-warehouse-architectures)
 - [OLAP & OLTP systems (again)](Courses/DE%20Asociate/7-Data%20Warehousing/data-warehousing-concepts.md#olap-and-oltp-systems)
 - [Data Warehouse Data Modeling](Courses/DE%20Asociate/7-Data%20Warehousing/data-warehousing-concepts.md#data-warehouse-data-modeling)
+- [Kimball's Four Step Process](Courses/DE%20Asociate/7-Data%20Warehousing/data-warehousing-concepts.md#kimballs-four-step-process)
+- [Slowly Changing Dimensions](Courses/DE%20Asociate/7-Data%20Warehousing/data-warehousing-concepts.md#slowly-changing-dimensions)
+- [Row vs. Column Data Store](Courses/DE%20Asociate/7-Data%20Warehousing/data-warehousing-concepts.md#row-vs-column-data-store)
+- [ETL & ELT](Courses/DE%20Asociate/7-Data%20Warehousing/data-warehousing-concepts.md#etl-and-elt)
+- [Data Cleaning](Courses/DE%20Asociate/7-Data%20Warehousing/data-warehousing-concepts.md#data-cleaning)
+- [On Premise and Cloud Data Warehouses](Courses/DE%20Asociate/7-Data%20Warehousing/data-warehousing-concepts.md#on-premise-and-cloud-data-warehouses)
 </details>
 
 ### Exercises

@@ -84,7 +84,7 @@ There are three levels to a data model:
     - partitions, CPUs, indexes, backups and tablespaces.
 <br>
 
-#### Relational model:
+### Relational model:
 ![](image-6.png)
 
 Let's look at some other ways this ER diagram could be converted.
@@ -96,7 +96,7 @@ The biggest difference here is how the tables are determined.
 <br>
 <br>
 
-#### Dimensional model:
+### Dimensional model:
 Dimensional modeling is an adaptation of the relational model specifically **for data warehouses**. <br>
 It's optimized for OLAP type of queries that aim to analyze rather than update. To do this, it uses the star schema. <br>
 It tends to be easy to interpret and extend. This is a big plus for analysts working on the warehouse.
@@ -104,6 +104,21 @@ It tends to be easy to interpret and extend. This is a big plus for analysts wor
 Dimensional models are made up of two types of tables:
 1. What the **fact** table holds is decided by the business use-case. It contains records of a key metric, and this metric changes often. Fact tables also hold foreign keys to dimension tables.
 2. **Dimension** tables hold descriptions of specific attributes and these do not change as often.
+
+### Fact tables
+A **fact table** consists of measurements or metrics about an organizational process. These are known as facts. Each row within the table captures a measurement or metric about one process transaction.<br>
+It also includes information about the customer who purchased the product, the date, and the product sold.<br>
+These values are not quantities on which we can perform mathematical operations but are foreign keys that allow us to join to other tables named dimension tables that provide valuable information and detail about the sales order.<br>
+
+![alt text](image-57.png)<br>
+`Tracking if a customer is a strategic customer is usually not an element of the fact table but of the dimension table.`
+
+### Dimension tables
+Dimension tables contain attributes and characteristics that describe the data in the fact table.<br>
+By joining this dimension table with the sales fact table, we can analyze Bravo's total sales by country. This is valuable information because it adds more detail to the total sales metric.<br>
+
+![alt text](image-56.png)<br>
+`By joining the fact table with other dimensional tables, such as the product and date dimensional tables, we can analyze the total sales with a larger set of questions.`
 
 The turquoise table is a fact table called songs. It contains foreign keys to purple dimension tables. These dimension tables expand on the attributes of a fact table, such as the album it is in and the artist who made it. The records in fact tables often change as new songs get inserted. Albums, labels, artists, and genres will be shared by more than one song - hence records in dimension tables won't change as much.
 
