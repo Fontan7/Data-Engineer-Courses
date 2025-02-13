@@ -1,5 +1,7 @@
 # Associate Data Engineer in SQL
+
 ### Summaries
+
 <details>
     <summary><a href="Courses/DE%20Asociate/1-Understanding%20DE/Understanding%20Data%20Engineering.md"> 1 Introduction to Data engineering </a></summary>
 
@@ -87,6 +89,14 @@
 - [On Premise and Cloud Data Warehouses](Courses/DE%20Asociate/7-Data%20Warehousing/data-warehousing-concepts.md#on-premise-and-cloud-data-warehouses)
 </details>
 
+<details>
+    <summary><a href="Courses/DE%20Asociate/8-Introduction%20to%20Snowflake/intro-to-snowflake.md"> 8 Introduction to Snowflake </a></summary>
+
+- [What is Snowflake?](Courses/DE%20Asociate/8-Introduction%20to%20Snowflake/intro-to-snowflake.md#what-is-snowflake)
+- [Snowflake Architecture](Courses/DE%20Asociate/8-Introduction%20to%20Snowflake/intro-to-snowflake.md#snowflake-architecture)
+- [Snowflake Competitors](Courses/DE%20Asociate/8-Introduction%20to%20Snowflake/intro-to-snowflake.md#snowflake-competitors)
+</details>
+
 ### Exercises
 1. [Extending dimensions](Courses/DE%20Asociate/Exercises/extending-dimensions.md) <br>
 2. [Foreign keys star model](Courses/DE%20Asociate/Exercises/foreign-keys-star-model.md) <br>
@@ -97,6 +107,10 @@
 7. [Creating & Refreshing a Materialized View](Courses/DE%20Asociate/Exercises/creating-and-refreshing-materialized-view.md) <br>
 8. [Creating vertical partitions](Courses/DE%20Asociate/Exercises/creating-vertical-partitions.md) <br>
 9. [Creating horizontal partitions](Courses/DE%20Asociate/Exercises/creating-horizontal-partitions.md) <br>
+10. [Casting in Snowflake](Courses\DE%20Asociate\Exercises\data-type-conversion-snowflake.md)<br>
+11. [Snowflake Natural Join](Courses\DE%20Asociate\Exercises\snowflake-natural-join.md)<br>
+12. [CTEs](Courses\DE%20Asociate\Exercises\cte.md)<br>
+13. [CTEs](Courses\DE%20Asociate\Exercises\early-filtering.md)<br>
 
 ### Bonus Projects
 1. [Analyzing students mental health](Courses/DE%20Asociate/Projects/analyzing-students-mental-health/exercise.md)
