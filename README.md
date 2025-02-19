@@ -1,4 +1,9 @@
 # Associate Data Engineer in SQL
+![Associate_Data_Engineer](https://img.shields.io/badge/Associate%20Data%20Engineer-Certified-red)
+![SQL](https://img.shields.io/badge/SQL-Experienced-g)
+![Theory](https://img.shields.io/badge/Theory-Intermediate-blue)
+![Snowflake](https://img.shields.io/badge/Snowflake-Begginer-lightblue)
+![Data Visualization ](https://img.shields.io/badge/Data%20Analysis-Begginer-lightblue)
 
 ### Summaries
 
@@ -132,6 +137,12 @@
 
 
 # Data Engineer in Python
+![Python_Data_Engineer](https://img.shields.io/badge/Python%20Data%20Engineer-Learning-green)
+![Git](https://img.shields.io/badge/Git-Experienced-g)
+![Python](https://img.shields.io/badge/Python-Intermediate-blue)
+![Airflow](https://img.shields.io/badge/Airflow-Intermediate-blue)
+![Theory](https://img.shields.io/badge/Theory-Intermediate-blue)
+
 ### Summaries
 1. 
 

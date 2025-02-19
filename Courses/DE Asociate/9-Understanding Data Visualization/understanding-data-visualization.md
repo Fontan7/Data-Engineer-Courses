@@ -84,3 +84,5 @@ As mentioned before, the power of box plots is that you can compare many distrib
 ![alt text](image-10.png)
 
 `Notice that the box plot for the house of Denmark shows a point. Points are extreme values, that is, values that are outside the range of the whiskers. Denmark's right-most outlier is Sweyn who ascended at age 53, which was exceptionally high for the 11th century.`
+
+## Scatter Plots
