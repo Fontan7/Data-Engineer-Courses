@@ -113,6 +113,10 @@
 - [Three Ways of Getting Insights](Courses/DE%20Asociate/9-Understanding%20Data%20Visualization/understanding-data-visualization.md#three-ways-of-getting-insights)
 - [Histograms](Courses/DE%20Asociate/9-Understanding%20Data%20Visualization/understanding-data-visualization.md#histograms)
 - [Box Plots](Courses/DE%20Asociate/9-Understanding%20Data%20Visualization/understanding-data-visualization.md#box-plots)
+- [Scatter Plots](Courses/DE%20Asociate/9-Understanding%20Data%20Visualization/understanding-data-visualization.md#scatter-plots)
+- [Line Plots](Courses/DE%20Asociate/9-Understanding%20Data%20Visualization/understanding-data-visualization.md#line-plots)
+- [Bar Plots](Courses/DE%20Asociate/9-Understanding%20Data%20Visualization/understanding-data-visualization.md#bar-plots)
+- [Dot Plots](Courses/DE%20Asociate/9-Understanding%20Data%20Visualization/understanding-data-visualization.md#dot-plots)
 </details>
 <br>
 
@@ -132,6 +136,10 @@
 11. [Snowflake Natural Join](Courses/DE%20Asociate/Exercises/snowflake-natural-join.md)<br>
 12. [CTEs](Courses/DE%20Asociate/Exercises/cte.md)<br>
 13. [Early Filtering](Courses/DE%20Asociate/Exercises/early-filtering.md)<br>
+14. [Interpreting Histograms](Courses/DE%20Asociate/Exercises/interpreting-histograms.md)<br>
+15. [Interpreting Box Plots](Courses/DE%20Asociate/Exercises/interpreting-box-plots.md)<br>
+16. [Interpreting Line Plots](Courses/DE%20Asociate/Exercises/interpreting-line-plots.md)<br>
+17. [Interpreting Line Plots 2](Courses/DE%20Asociate/Exercises/interpreting-line-plots2.md)<br>
 </details>
 
 ### ➕ Bonus Projects 
