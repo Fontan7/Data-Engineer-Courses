@@ -5,7 +5,7 @@
 ![Snowflake](https://img.shields.io/badge/Snowflake-Begginer-lightblue)
 ![Data Visualization ](https://img.shields.io/badge/Data%20Analysis-Begginer-lightblue)
 
-### Summaries
+### 📖 Summaries
 
 <details>
     <summary><a href="Courses/DE%20Asociate/1-Understanding%20DE/Understanding%20Data%20Engineering.md"> 1 Introduction to Data engineering </a></summary>
@@ -114,8 +114,11 @@
 - [Histograms](Courses/DE%20Asociate/9-Understanding%20Data%20Visualization/understanding-data-visualization.md#histograms)
 - [Box Plots](Courses/DE%20Asociate/9-Understanding%20Data%20Visualization/understanding-data-visualization.md#box-plots)
 </details>
+<br>
 
-### Some Exercises
+<details>
+    <summary><b>Key Exercises</b> 🎯</summary>
+
 1. [Extending dimensions](Courses/DE%20Asociate/Exercises/extending-dimensions.md) <br>
 2. [Foreign keys star model](Courses/DE%20Asociate/Exercises/foreign-keys-star-model.md) <br>
 3. [Querying Snowflake shcema](Courses/DE%20Asociate/Exercises/querying-snowflake-schema.md) <br>
@@ -129,8 +132,9 @@
 11. [Snowflake Natural Join](Courses/DE%20Asociate/Exercises/snowflake-natural-join.md)<br>
 12. [CTEs](Courses/DE%20Asociate/Exercises/cte.md)<br>
 13. [Early Filtering](Courses/DE%20Asociate/Exercises/early-filtering.md)<br>
+</details>
 
-### Bonus Projects
+### ➕ Bonus Projects 
 1. [Analyzing students mental health](Courses/DE%20Asociate/Projects/analyzing-students-mental-health/exercise.md)
 
 ### Certificate
@@ -143,13 +147,15 @@
 ![Airflow](https://img.shields.io/badge/Airflow-Intermediate-blue)
 ![Theory](https://img.shields.io/badge/Theory-Intermediate-blue)
 
-### Summaries
+### 📖 Summaries
 1. 
 
-### Some Exercises
-1. 
+<br>
+<details>
+    <summary><b>Key Exercises</b> 🎯</summary>
+</details>
 
-### Bonus Projects
+### ➕ Bonus Projects
 1.
 
 ### Certificate
