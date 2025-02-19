@@ -102,6 +102,14 @@
 - [Handling Semi-structured Data](Courses/DE%20Asociate/8-Introduction%20to%20Snowflake/intro-to-snowflake.md#handling-semi-structured-data)
 </details>
 
+<details>
+    <summary><a href="Courses/DE%20Asociate/9-Understanding%20Data%20Visualization/understanding-data-visualization.md"> 9 Understanding Data Visualization </a></summary>
+
+- [Three Ways of Getting Insights](Courses/DE%20Asociate/9-Understanding%20Data%20Visualization/understanding-data-visualization.md#three-ways-of-getting-insights)
+- [Histograms](Courses/DE%20Asociate/9-Understanding%20Data%20Visualization/understanding-data-visualization.md#histograms)
+- [Box Plots](Courses/DE%20Asociate/9-Understanding%20Data%20Visualization/understanding-data-visualization.md#box-plots)
+</details>
+
 ### Exercises
 1. [Extending dimensions](Courses/DE%20Asociate/Exercises/extending-dimensions.md) <br>
 2. [Foreign keys star model](Courses/DE%20Asociate/Exercises/foreign-keys-star-model.md) <br>
