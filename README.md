@@ -115,7 +115,7 @@
 - [Box Plots](Courses/DE%20Asociate/9-Understanding%20Data%20Visualization/understanding-data-visualization.md#box-plots)
 </details>
 
-### Exercises
+### Some Exercises
 1. [Extending dimensions](Courses/DE%20Asociate/Exercises/extending-dimensions.md) <br>
 2. [Foreign keys star model](Courses/DE%20Asociate/Exercises/foreign-keys-star-model.md) <br>
 3. [Querying Snowflake shcema](Courses/DE%20Asociate/Exercises/querying-snowflake-schema.md) <br>
@@ -146,7 +146,10 @@
 ### Summaries
 1. 
 
-### Projects
+### Some Exercises
 1. 
+
+### Bonus Projects
+1.
 
 ### Certificate
