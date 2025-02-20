@@ -162,3 +162,69 @@ Here is a dot plot of the social media followings of the ESPN 2017 top 100 famou
 
 ![alt text](image-23.png)
 
+## Using Color
+The colorspace designed for data visualization is called hue-chroma-luminance, or HCL. It's designed to deal with issues of color perception.<br>
+Hue is like the color of the rainbow, from red, through orange, green and blue, to purple and back to red.<br>
+![alt text](image-24.png)
+
+Chroma is the intensity of the color, from grey to a bright color.<br>
+![alt text](image-28.png)
+
+Luminance is the brightness of the color, from black to white.<br>
+![alt text](image-29.png)
+
+When choosing the colors for your plot, you can pick one of three types of color scale.<br>
+1. Qualitative color scales are used to distinguish unordered categories, and usually involve changing the hue, while keeping chroma and luminance fixed.<br>
+![alt text](image-25.png)
+
+2. To emphasize ordering in your data, that is, to show that values are greater than or less than each other, you need a sequential color scale. Most sequential scales change either chroma or luminance, while keeping hue fixed.<br>
+![alt text](image-26.png)
+
+3. To emphasize whether values are greater than or less than some middle value, use a diverging scale. These are similar to sequential scales, but have a neutral color like white or gray in the middle, and have increasingly bold colors with different hues on either edge.<br>
+![alt text](image-27.png)
+
+
+You can also use sequential scales with continuous variables. Here's the scatter plot of life expectancy.<br>
+This is slightly cheating because it uses a sequential scale that changes the hue. The color scale is called viridis, and it's designed to be easily viewable by color blind people, and to print well in black and white.<br>
+![alt text](image-30.png)<br>
+
+## Pair Plots
+Pair plots work with up to about ten variables at once, and they show you the distribution of each variable, and the relationship between each pair of variables.<br>
+Pair plots can be tremendously helpful for quickly exploring a new dataset.
+
+Here is a pair plot of LA home prices. There are four variables in the dataset, giving four rows of panels and four columns.<br>
+![alt text](image-31.png)<br>
+- City is a categorical variable, so its distribution is represented as a bar plot of counts for each city.
+- The other three variables - number of beds, price, and area - are continuous, so their distributions are represented by histograms.
+- Panels off the diagonal show relationships between pairs of variables.
+    - When both variables are continuous, you see scatter plots of each pair of variables, and their correlation.<br>
+    `For example, in the second column, fourth row, you see a scatter plot of number of beds versus area.`
+    - When comparing a categorical variable to a continuous variable you get a box plot and a histogram of the continuous variable split by the categorical variable.<br>
+    `For example, in the third column, first row, you see a box plot of prices for each city.`
+
+
+## Correlation Heatmap
+Correlation heatmaps are designed to show relationships between pairs of continuous variables. They are compact, so you can easily compare tens of variables at once.
+
+Here's a correlation heatmap of a customer satisfaction survey for a Yellow Pages advertising product.<br>
+Customers rated the importance of product features on a scale from 1 to 10.<br>
+Where two features consistently received similar scores by customers, they are positively correlated, and colored in a more vibrant red.<br>
+Those bright reds in the bottom left show that the price related product aspects all strongly correlate with each other.<br>
+![alt text](image-32.png)
+
+## Parallel Coordinates Plots
+Parallel coordinates plots provide a solution when you have lots of continuous variables, and want to understand their relationship or group them into clusters.
+
+Here's a parallel coordinates plot of the three variables you saw before, plus the human development index score.<br>
+Each line represents one country, and each continuous variable appears on the x-axis, just like a bar plot. To make each variable comparable, the y-axis simply ranges from the lowest value in the dataset for that variable to the highest value.<br>
+![alt text](image-33.png)<br>
+`The wonderful thing about this plot is that more metrics can just be added to the x-axis. You can easily compare ten or twenty variables at once.`
+
+## Pie Plots / Polar Coordinates
+A pie plot is just a bar plot where the bar lengths are converted to angles.<br>
+Unfortunately, this plot is much harder to interpret than the bar plot.<br>
+Data visualization research suggests that bar plots are almost always easier to interpret than pie plots.
+
+![alt text](image-34.png)<br>
+`There is one exception, though it is fairly niche. If you have data that has some natural circularity to it, like the time of day or a direction.`
+

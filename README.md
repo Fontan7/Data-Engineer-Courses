@@ -117,6 +117,11 @@
 - [Line Plots](Courses/DE%20Asociate/9-Understanding%20Data%20Visualization/understanding-data-visualization.md#line-plots)
 - [Bar Plots](Courses/DE%20Asociate/9-Understanding%20Data%20Visualization/understanding-data-visualization.md#bar-plots)
 - [Dot Plots](Courses/DE%20Asociate/9-Understanding%20Data%20Visualization/understanding-data-visualization.md#dot-plots)
+- [Using Color](Courses/DE%20Asociate/9-Understanding%20Data%20Visualization/understanding-data-visualization.md#using-color)
+- [Pair Plots](Courses/DE%20Asociate/9-Understanding%20Data%20Visualization/understanding-data-visualization.md#pair-plots)
+- [Correlation Heatmap](Courses/DE%20Asociate/9-Understanding%20Data%20Visualization/understanding-data-visualization.md#correlation-heatmap)
+- [Parallel Coordinates Plots](Courses/DE%20Asociate/9-Understanding%20Data%20Visualization/understanding-data-visualization.md#parallel-coordinates-plots)
+- [Pie Plots](Courses/DE%20Asociate/9-Understanding%20Data%20Visualization/understanding-data-visualization.md#pie-plots-/-polar-coordinates)
 </details>
 <br>
 
