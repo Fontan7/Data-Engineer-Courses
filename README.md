@@ -149,6 +149,7 @@
 
 ### ➕ Bonus Projects 
 1. [Analyzing students mental health](Courses/DE%20Asociate/Projects/analyzing-students-mental-health/exercise.md)
+2. [Exploring London's Travel Network](Courses/DE%20Asociate/Projects/exploring-london-travel-network/exercise.md)
 
 ### Certificate
 
